@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { TracingBeamDemo, TimelineDemo, CompareDemo } from "@/data/data";
-import { Compare } from "@/components/ui/compare";
+import { TracingBeamDemo, TimelineDemo} from "@/data/data";
+
 
 const investmentFocus = [
   {
@@ -134,7 +134,7 @@ export default function About() {
       </div>
 
       {/* Before & After Comparison */}
-      <CompareDemo/>
+   
 
     </section>
   );

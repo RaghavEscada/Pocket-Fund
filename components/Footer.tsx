@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { LinkHover, TextMask } from "@/animation";
-import { footerItems, footernavbarItems } from "@/constants";
-import { TextHoverEffectDemo } from "@/data/data";
+import { footerItems } from "@/constants";
+
 
 export default function Footer() {
   const phrase = ["*", "Pocket big", "with us."];

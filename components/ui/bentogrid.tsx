@@ -1,4 +1,3 @@
-
 import React from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -13,7 +12,7 @@ export function FeaturesSectionDemo() {
   const features = [
     {
       title: "Dev Shah: Founder of Pocket Fund",
-      description: "Founder’s Mission: Simplifying Micro Acquisitions.",
+      description: "Founder&apos;s Mission: Simplifying Micro Acquisitions.",
       skeleton: <SkeletonOne />,
       className: "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
       linkedIn: "https://www.linkedin.com/in/devshah", // replace with actual LinkedIn URL
@@ -33,7 +32,7 @@ export function FeaturesSectionDemo() {
     {
       title: "Tech-Driven Creativity",
       description:
-        " Innovating with AI, video, and digital tools – We blend creativity with technology to deliver next-gen technological solutions.",
+        " Innovating with AI, video, and digital tools &apos; We blend creativity with technology to deliver next-gen technological solutions.",
       skeleton: <SkeletonTwo />,
       className: "border-b col-span-1 lg:col-span-2 dark:border-neutral-800",
     },
@@ -61,7 +60,7 @@ export function FeaturesSectionDemo() {
         </h4>
 
         <p className="text-2xl  max-w-5xl  my-4 mx-auto text-white text-center font-normal dark:text-white">
-        Dev Shah, founder of Pocket Fund, hails from Mumbai and leads acquisitions and growth initiatives while openly documenting the journey through social content. With a passion for building systems that simplify micro acquisitions, he's focused on empowering the next generation of digital entrepreneurs.
+        Dev Shah founder of Pocket Fund hails from Mumbai and leads acquisitions and growth initiatives while openly documenting the journey through social content. With a passion for building systems that simplify micro acquisitions he is focused on empowering the next generation of digital entrepreneurs.
         </p>
       </div>
 

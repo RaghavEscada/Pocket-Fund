@@ -5,7 +5,7 @@ import { LampContainer } from "@/components/ui/lamp";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
-import { Compare } from "@/components/ui/compare";
+
 
 
 import React from "react";
@@ -468,39 +468,5 @@ export const Icon = ({ className, ...rest }: any) => {
     </svg>
   );
 };
-
-export function CompareDemo() {
-  return (
-    <div className="flex h-[60vh] w-3/4 items-center justify-center px-1 [perspective:800px] [transform-style:preserve-3d] md:px-8">
-      <div
-        style={{
-          transform: "rotateX(15deg) translateZ(80px)",
-        }}
-        className="mx-auto h-1/2 w-3/4 rounded-3xl border border-neutral-200 bg-neutral-100 p-1 md:h-3/4 md:p-4 dark:border-neutral-800 dark:bg-neutral-900"
-      >
-        <Compare
-          firstImage="/pf.png"
-          secondImage="/pf.png"
-          firstImageClassName="object-cover object-left-top w-full"
-          secondImageClassname="object-cover object-left-top w-full"
-          className="h-full w-full rounded-[22px] md:rounded-lg"
-          slideMode="drag"
-          autoplay={false}
-        />
-      </div>
-    </div>
-  );
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
