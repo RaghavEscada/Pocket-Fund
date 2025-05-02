@@ -50,11 +50,18 @@ export default function Projects() {
       </div>
 
     
+	  <h1 className="text-7xl pt-20 font-semibold text-center mb-10">
+        Before and After
+      </h1>
+	  <p className="text-center">hover on the cards</p>
 
+      {/* CanvasRevealEffectDemo Section */}
       <div className="pt-20">
         <CanvasRevealEffectDemo />
       </div>
-	    <div className="pt-20">
+
+      {/* FeaturesSectionDemo Section */}
+      <div className="pt-20">
         <FeaturesSectionDemo />
       </div>
     </section>
