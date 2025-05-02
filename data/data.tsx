@@ -2,15 +2,17 @@ import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { Timeline } from "@/components/ui/timeline";
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import { LampContainer } from "@/components/ui/lamp";
-import { HeroParallax } from "@/components/ui/hero-parallax";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
+import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
+import { Compare } from "@/components/ui/compare";
+
 
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { twMerge } from "tailwind-merge";
+import { motion, AnimatePresence } from "framer-motion";
+
 
 export function AnimatedTestimonialsDemo() {
   const testimonials = [ {
@@ -57,60 +59,81 @@ export function AnimatedTestimonialsDemo() {
 export function TimelineDemo() {
   const data = [
     {
-      title: "Client Requirements & Discovery",
+      title: "1. Source: Spot Hidden Winners",
       content: (
         <div>
           <p className="text-white dark:text-white text-lg md:text-xl font-normal mb-8">
-            Before crafting any strategy, we take the time to deeply understand your business, goals, and audience. Our team conducts thorough market research to align our approach with your brand identity.
+            We actively hunt down underpriced digital assets — micro-SaaS, niche content sites, or indie tools under $5,000 — with untapped utility, lean ops, and a clear path to profitability. 
+            We're not looking for noise — we're looking for signals that scream: "This can grow."
           </p>
           <div className="flex justify-end gap-4">
-            <Image src="/1.jpeg" alt="Discovery Phase" width={250} height={250} layout="intrinsic" />
-            
+            <Image src="/1.jpeg" alt="Deal Sourcing" width={250} height={250} layout="intrinsic" />
           </div>
         </div>
       ),
     },
     {
-      title: "Strategy & Planning",
+      title: "2. Evaluate: Analyze Like a Machine, Decide Like a Human",
       content: (
         <div>
           <p className="text-white dark:text-white text-lg md:text-xl font-normal mb-8">
-            Our experts map out a strategic plan that includes content, branding, and tech solutions. Every decision is backed by data to ensure maximum impact.
+            Within 48–72 hours, we break down product stickiness, user love, monetization mechanics, traffic sources, and growth headroom. 
+            We're obsessed with clarity — and only pursue assets with margin for operational alchemy and exponential return.
           </p>
           <div className="flex justify-end gap-4">
-            <Image src="/2.jpeg" alt="Strategy Session" width={250} height={250} layout="intrinsic" />
-           
+            <Image src="/2.jpeg" alt="Due Diligence" width={250} height={250} layout="intrinsic" />
           </div>
         </div>
       ),
     },
     {
-      title: "Execution & Implementation",
+      title: "3. Acquire: Move Fast. Stay Clean.",
+      content: (
+        <div>
+          <p className="text-white dark:text-white text-lg md:text-xl font-normal mb-8">
+            We present founders with clear, no-fluff offers. No slow negotiations. No red tape. Deals close in 1–2 weeks with founder-friendly terms and complete transparency.
+            We're the team founders actually like selling to.
+          </p>
+          <div className="flex justify-end gap-4">
+            <Image src="/3.jpeg" alt="Acquisition" width={250} height={250} layout="intrinsic" />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "4. Operate: Rebuild. Automate. Elevate.",
+      content: (
+        <div>
+          <p className="text-white dark:text-white text-lg md:text-xl font-normal mb-8">
+            Our team dives in post-transition. We streamline ops, automate busywork, refresh the brand, and inject new life through content engines, UX tweaks, and CRO. 
+            Think of it as a lean startup reboot — minus the burn.
+          </p>
+          <div className="flex justify-end gap-4">
+            <Image src="/au.png" alt="Operations" width={250} height={250} layout="intrinsic" />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "5. Exit or Scale: ROI Unlocked",
       content: (
         <div>
           <p className="text-white dark:text-white text-lg md:text-xl font-normal mb-4">
-            Our team launches campaigns, develops websites, and executes branding strategies with precision, ensuring a seamless experience.
+            With performance optimized, we choose one of two paths: exit for 2x–10x returns or hold and compound monthly cash flow. Either way, the asset pays back — fast and clean.
           </p>
           <div className="mb-8">
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-lg md:text-xl">
-              𝌞 Content Strategy & Branding
+            <div className="flex gap-2 items-center text-white text-lg md:text-xl">
+              🚀 Strategic Exits to Operator-VCs or Marketplaces
             </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-lg md:text-xl">
-              🖥️ Website & Tech Development
+            <div className="flex gap-2 items-center text-white text-lg md:text-xl">
+              💸 Compound Cash Flow for Passive Yield
             </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-lg md:text-xl">
-              📱 Social Media & Community Management
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-lg md:text-xl">
-              💸 Paid Marketing & Ad Campaigns
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-lg md:text-xl">
-              📈 Performance Analytics & Optimization
+            <div className="flex gap-2 items-center text-white text-lg md:text-xl">
+              🔁 Capital Recycled into New Growth Bets
             </div>
           </div>
           <div className="flex justify-end gap-4">
-            <Image src="/3.jpeg" alt="Execution Process" width={250} height={250} layout="intrinsic" />
-           
+            <Image src="/roi.png" alt="Exit Strategy" width={250} height={250} layout="intrinsic" />
           </div>
         </div>
       ),
@@ -125,97 +148,16 @@ export function TimelineDemo() {
 
 export function TextHoverEffectDemo() {
   return (
-    <div className="h-[40rem] flex text-9xl items-center justify-center relative">
-    <div className="h-[40rem] text-4xl flex items-center justify-center absolute">
-      <TextHoverEffect text="REVLIENT." />
+    <div className="h-[20rem] flex text-1xl items-center justify-center relative">
+    <div className="h-[40rem] text-1xl flex items-center justify-center absolute">
+      <TextHoverEffect text="POCKET FUND" />
     </div>
-    <TextHoverEffect text="REVLIENT." />
+    <TextHoverEffect text="POCKET FUND" />
   </div>
-
-
   );
 };
 
-export function HeroParallaxDemo() {
-  return <HeroParallax products={products} />;
-}
-export const products = [
-  {
-    "title": "Revlient",
-    "link": "https://revlient.com",
-    "thumbnail": "/b5.png"
-  },
-  {
-    "title": "Revlient",
-    "link": "https://revlient.com",
-    "thumbnail": "/b3.png"
-  },
-  {
-    "title": "Revlient",
-    "link": "https://revlient.com",
-    "thumbnail": "/b1.png"
-  },
-  {
-    "title": "Revlient",
-    "link": "https://revlient.com",
-    "thumbnail": "/b4.png"
-  },
-  {
-    "title": "Revlient",
-    "link": "https://revlient.com",
-    "thumbnail": "/b5.png"
-  },
-  {
-    "title": "Revlient",
-    "link": "https://revlient.com",
-    "thumbnail": "/b4.png"
-  },
-  {
-    "title": "Revlient",
-    "link": "https://revlient.com",
-    "thumbnail": "/revlogo.png"
-  },
-  {
-    "title": "Revlient",
-    "link": "https://revlient.com",
-    "thumbnail": "/b1.png"
-  },
-  {
-    "title": "Revlient",
-    "link": "https://revlient.com",
-    "thumbnail": "/b3.png"
-  },
-  {
-    "title": "Revlient",
-    "link": "https://revlient.com",
-    "thumbnail": "/b1.png"
-  },
-  {
-    "title": "Revlient",
-    "link": "https://revlient.com",
-    "thumbnail": "/b5.png"
-  },
-  {
-    "title": "Revlient",
-    "link": "https://revlient.com",
-    "thumbnail": "/b4.png"
-  },
-  {
-    "title": "Revlient",
-    "link": "https://revlient.com",
-    "thumbnail": "/b3.png"
-  },
-  {
-    "title": "Revlient",
-    "link": "https://revlient.com",
-    "thumbnail": "/b5.png"
-  },
-  {
-    "title": "Revlient",
-    "link": "https://revlient.com",
-    "thumbnail": "/b1.png"
-  }
-];
+
 
 export function LampDemoCraft() {
   return (
@@ -313,79 +255,73 @@ export function TracingBeamDemo() {
  
 const dummyContent = [
   {
-    title: "Lorem Ipsum Dolor Sit Amet",
+    title: "Company Acquisition Strategy: Content, Newsletter, and Niche Services-Based Businesses",
     description: (
       <>
         <p>
-          Sit duis est minim proident non nisi velit non consectetur. Esse
-          adipisicing laboris consectetur enim ipsum reprehenderit eu deserunt
-          Lorem ut aliqua anim do. Duis cupidatat qui irure cupidatat incididunt
-          incididunt enim magna id est qui sunt fugiat. Laboris do duis pariatur
-          fugiat Lorem aute sit ullamco. Qui deserunt non reprehenderit dolore
-          nisi velit exercitation Lorem qui do enim culpa. Aliqua eiusmod in
-          occaecat reprehenderit laborum nostrud fugiat voluptate do Lorem culpa
-          officia sint labore. Tempor consectetur excepteur ut fugiat veniam
-          commodo et labore dolore commodo pariatur.
+        We specialize in acquiring businesses valued around $100K USD, particularly those that operate in the realms of content creation, newsletters, and niche services. These businesses typically operate in focused markets with highly engaged audiences and offer specialized services or content that cater to specific needs.
+
+
         </p>
-        <p>
-          Dolor minim irure ut Lorem proident. Ipsum do pariatur est ad ad
-          veniam in commodo id reprehenderit adipisicing. Proident duis
-          exercitation ad quis ex cupidatat cupidatat occaecat adipisicing.
-        </p>
-        <p>
-          Tempor quis dolor veniam quis dolor. Sit reprehenderit eiusmod
-          reprehenderit deserunt amet laborum consequat adipisicing officia qui
-          irure id sint adipisicing. Adipisicing fugiat aliqua nulla nostrud.
-          Amet culpa officia aliquip deserunt veniam deserunt officia
-          adipisicing aliquip proident officia sunt.
-        </p>
+       
       </>
     ),
-    badge: "React",
+    badge: "Business around $100k",
     image:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "/tr1.jpg",
   },
   {
-    title: "Lorem Ipsum Dolor Sit Amet",
+    title: "Niche-specific value:",
     description: (
       <>
         <p>
-          Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-          deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-          non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-          sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
-          velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
-          commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
-        </p>
-        <p>
-          In dolore veniam excepteur eu est et sunt velit. Ipsum sint esse
-          veniam fugiat esse qui sint ad sunt reprehenderit do qui proident
-          reprehenderit. Laborum exercitation aliqua reprehenderit ea sint
-          cillum ut mollit.
+        Niche-specific value refers to a business's unique offering tailored to meet the needs of a specific, often underserved market segment. By focusing on a well-defined niche, businesses can create highly specialized products or services that resonate with a targeted audience. This allows them to build a loyal customer base, command higher prices, and reduce competition from generalist companies. The key is to understand the niche deeply and offer value that addresses specific pain points or desires that mainstream providers might overlook.
         </p>
       </>
     ),
-    badge: "Changelog",
+    badge: "Niche Services",
     image:
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "/tr3.jpg",
   },
   {
-    title: "Lorem Ipsum Dolor Sit Amet",
+    title: "Growth potential via automation/content:",
     description: (
       <>
         <p>
-          Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-          deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-          non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-          sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
-          velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
-          commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
+        Growth potential via automation/content highlights the opportunity for a business to scale efficiently by leveraging technology and content strategies. Automation can streamline repetitive tasks, improve operational efficiency, and reduce labor costs, freeing up resources to focus on growth. Meanwhile, a strong content strategy (such as blogs, social media, videos, etc.) can drive inbound marketing, increase brand awareness, and attract a larger audience. By combining automation with content marketing, businesses can achieve sustainable growth with fewer manual efforts, increasing their long-term scalability.
         </p>
       </>
     ),
-    badge: "Launch Week",
+    badge: "Scale",
     image:
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=3506&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "/tr4.png",
+  },
+  {
+    title: "Simple operating structure:",
+    description: (
+      <>
+        <p>
+        A simple operating structure refers to a streamlined, efficient business model that minimizes complexity in daily operations. It involves clear and straightforward processes, fewer layers of management, and easily manageable workflows. This type of structure is ideal for businesses that want to reduce overhead, enhance communication, and adapt quickly to changes. With a simple operating structure, the business is less prone to bureaucratic inefficiencies, and the team can focus on execution and growth rather than navigating a complex organizational hierarchy.
+        </p>
+      </>
+    ),
+    badge: "Operations",
+    image:
+    "/tr6.png",
+  },
+
+  {
+    title: "Low competition:",
+    description: (
+      <>
+        <p>
+        Low competition refers to a market environment where there are few businesses or players offering similar products or services. In such markets, companies can often operate with fewer direct competitors, giving them more room to grow and potentially capture a larger market share. A low-competition landscape often allows for pricing power, brand loyalty, and easier customer acquisition. Businesses in these markets typically benefit from less price sensitivity and the ability to establish themselves as market leaders more easily.
+        </p>
+      </>
+    ),
+    badge: "Market Competence",
+    image:
+    "/tr5.png",
   },
 ];
 
@@ -400,7 +336,7 @@ export function BackgroundGradientDemo() {
           width="400"
           className="object-contain"
         />
-        <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
+        <p className="text-base sm:text-xl text-blue-500 mt-4 mb-2 dark:text-neutral-200">
           Air Jordan 4 Retro Reimagined
         </p>
  
@@ -419,6 +355,145 @@ export function BackgroundGradientDemo() {
     </div>
   );
 }
+
+export function CanvasRevealEffectDemo() {
+  return (
+    <>
+      <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
+        <Card title="Sourcely AI 
+        before a" icon={<AceternityIcon />}>
+          <CanvasRevealEffect
+            animationSpeed={5.1}
+            containerClassName="bg-emerald-900"
+          />
+        </Card>
+        <Card title="Nishajj is Munni" icon={<AceternityIcon />}>
+          <CanvasRevealEffect
+            animationSpeed={3}
+            containerClassName="bg-black"
+            colors={[
+              [236, 72, 153],
+              [232, 121, 249],
+            ]}
+            dotSize={2}
+          />
+          {/* Radial gradient for the cute fade */}
+          <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
+        </Card>
+       
+      </div>
+    </>
+  );
+}
+ 
+const Card = ({
+  title,
+  icon,
+  children,
+}: {
+  title: string;
+  icon: React.ReactNode;
+  children?: React.ReactNode;
+}) => {
+  const [hovered, setHovered] = React.useState(false);
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[30rem] relative"
+    >
+      <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+      <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+      <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+      <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+ 
+      <AnimatePresence>
+        {hovered && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="h-full w-full absolute inset-0"
+          >
+            {children}
+          </motion.div>
+        )}
+      </AnimatePresence>
+ 
+      <div className="relative z-20">
+        <div className="text-center group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center">
+          {icon}
+        </div>
+        <h2 className="dark:text-white text-xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200">
+          {title}
+        </h2>
+      </div>
+    </div>
+  );
+};
+ 
+const AceternityIcon = () => {
+  return (
+    <svg
+      width="66"
+      height="65"
+      viewBox="0 0 66 65"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-10 w-10 text-black dark:text-white group-hover/canvas-card:text-white "
+    >
+      <path
+        d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
+        stroke="currentColor"
+        strokeWidth="15"
+        strokeMiterlimit="3.86874"
+        strokeLinecap="round"
+        style={{ mixBlendMode: "darken" }}
+      />
+    </svg>
+  );
+};
+ 
+export const Icon = ({ className, ...rest }: any) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+      className={className}
+      {...rest}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
+    </svg>
+  );
+};
+
+export function CompareDemo() {
+  return (
+    <div className="flex h-[60vh] w-3/4 items-center justify-center px-1 [perspective:800px] [transform-style:preserve-3d] md:px-8">
+      <div
+        style={{
+          transform: "rotateX(15deg) translateZ(80px)",
+        }}
+        className="mx-auto h-1/2 w-3/4 rounded-3xl border border-neutral-200 bg-neutral-100 p-1 md:h-3/4 md:p-4 dark:border-neutral-800 dark:bg-neutral-900"
+      >
+        <Compare
+          firstImage="/pf.png"
+          secondImage="/pf.png"
+          firstImageClassName="object-cover object-left-top w-full"
+          secondImageClassname="object-cover object-left-top w-full"
+          className="h-full w-full rounded-[22px] md:rounded-lg"
+          slideMode="drag"
+          autoplay={false}
+        />
+      </div>
+    </div>
+  );
+}
+
+
+
 
 
 

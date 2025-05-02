@@ -10,30 +10,13 @@ import { motion } from "framer-motion";
 
 // Define navigation items with icons
 const navItems = [
+  
   {
-    id: 7,
+    id: 4,
     title: "Contact",
-    href: "/contact",
+   href:"https://wa.me/+919820059357?text=Dear%20Dev%20Shah%2C%20I%20hope%20you%20are%20doing%20well.%20I%20am%20interested%20in%20learning%20more%20about%20your%20VC%20firm%20and%20ongoing%20projects.%20Could%20you%20please%20provide%20more%20details%20or%20let%20me%20know%20a%20suitable%20time%20to%20discuss%20further%3F%20Looking%20forward%20to%20your%20response.%20Best%20regards%2C%20Client",
     icon: AiOutlineMail
-  },
-  {
-    id: 1,
-    title: "Team",
-    href: "/rev-team",
-    icon: HiOutlineUserGroup
-  },
-  {
-    id: 2,
-    title: "Services",
-    href: "/services",
-    icon: MdOutlineDesignServices
-  },
-  {
-    id: 3,
-    title: "Works",
-    href: "/rev-works",
-    icon: AiOutlineFundProjectionScreen
-  },
+  }
 ];
 
 export default function MobileNav() {

@@ -7,28 +7,40 @@ import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { IconBrandYoutubeFilled } from "@tabler/icons-react";
 import Link from "next/link";
+import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 export function FeaturesSectionDemo() {
   const features = [
     {
-      title: "Content That Connects",
-      description:
-        "From viral campaigns to timeless messaging – We create content that resonates, ensuring your brand stays unforgettable.",
+      title: "Dev Shah: Founder of Pocket Fund",
+      description: "Founder’s Mission: Simplifying Micro Acquisitions.",
       skeleton: <SkeletonOne />,
-      className:
-        "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
+      className: "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
+      linkedIn: "https://www.linkedin.com/in/devshah", // replace with actual LinkedIn URL
+      instagram: "https://www.instagram.com/devshah",   // replace with actual Instagram URL
+      socialLinks: (
+        <div className="flex space-x-4">
+          <a href="https://www.linkedin.com/in/devshah" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin size={24} />
+          </a>
+          <a href="https://www.instagram.com/devshah" target="_blank" rel="noopener noreferrer">
+            <FaInstagram size={24} />
+          </a>
+        </div>
+      ),
     },
+    
     {
       title: "Tech-Driven Creativity",
       description:
-        " Innovating with AI, video, and digital tools – We blend creativity with technology to deliver next-gen marketing solutions.",
+        " Innovating with AI, video, and digital tools – We blend creativity with technology to deliver next-gen technological solutions.",
       skeleton: <SkeletonTwo />,
       className: "border-b col-span-1 lg:col-span-2 dark:border-neutral-800",
     },
     {
       title: "Our Prime Inspiration & Method of Craft",
       description:
-        "Transforming visions into reality – We craft powerful brand stories, sleek visuals, and high-impact digital campaigns that captivate your internet audience.",
+        "Transforming visions into reality – We craft powerful brand stories, sleek visuals, and high-impact digital campaigns that captivate your worldwide audience.",
       skeleton: <SkeletonThree />,
       className:
         "col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-800",
@@ -36,7 +48,7 @@ export function FeaturesSectionDemo() {
     {
       title: "Beyond Borders: The Power of Global Connection 🌍",
       description:
-        "We craft experiences that transcend geography, culture, and language—connecting brands with audiences worldwide. Through innovative design, strategic storytelling, and cutting-edge digital solutions, we ensure your message resonates across borders, creating a lasting global impact.",
+        "We craft experiences that transcend geography, culture, and language—connecting brands with audiences worldwide. Through innovative design, strategic storytelling, and cutting-edge digital solutions, we ensure your their ideas resonates across borders, creating a lasting global impact.",
       skeleton: <SkeletonFour />,
       className: "col-span-1 lg:col-span-3 border-b lg:border-none",
     },
@@ -45,11 +57,11 @@ export function FeaturesSectionDemo() {
     <div className="relative z-20 py-10 rounded-xl bg-black lg:py-40 max-w-7xl mx-auto">
       <div className="px-8">
         <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-white dark:text-white">
-         Incredible Team & Ethics
+        Behind the Vision
         </h4>
 
-        <p className="text-sm lg:text-base  max-w-2xl  my-4 mx-auto text-white text-center font-normal dark:text-white">
-        here aesthetics meet strategy – Our designs do more than look good; they engage, inspire, and drive action for your brand.
+        <p className="text-2xl  max-w-5xl  my-4 mx-auto text-white text-center font-normal dark:text-white">
+        Dev Shah, founder of Pocket Fund, hails from Mumbai and leads acquisitions and growth initiatives while openly documenting the journey through social content. With a passion for building systems that simplify micro acquisitions, he's focused on empowering the next generation of digital entrepreneurs.
         </p>
       </div>
 
@@ -111,7 +123,7 @@ export const SkeletonOne = () => {
         <div className="flex flex-1 w-full h-full flex-col space-y-2  ">
           {/* TODO */}
           <Image
-            src="/devadi.jpeg"
+            src="/dev.png"
             alt="header"
             width={800}
             height={800}
@@ -138,7 +150,7 @@ export const SkeletonThree = () => {
           {/* TODO */}
           <IconBrandYoutubeFilled className="h-20 w-20 absolute z-10 inset-0 text-red-500 m-auto " />
           <Image
-            src="/thefutur.png"
+            src="/pf.png"
             alt="header"
             width={800}
             height={800}

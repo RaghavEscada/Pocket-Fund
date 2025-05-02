@@ -38,11 +38,14 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-5xl md:text-4xl mb-4 text-white dark:text-white max-w-4xl">
-          Timeline of Revlient :
-        </h2>
-        <p className="text-white pt-4 dark:text-neutral-300 text-lg md:text-base max-w-sm">
-        At Revlient, we believe in a client-first strategy that blends innovation, data-driven insights, and human-centric design to create impactful digital experiences.
-        </p>
+          Timeline of Acquition at Pocket Fund :
+          </h2>
+<ul className="list-disc list-inside text-white pt-4 dark:text-neutral-300 text-lg md:text-base max-w-sm space-y-2">
+  <li>Initial evaluation: 48–72 hours</li>
+  <li>Deal closing: 1–2 weeks</li>
+  <li>Onboarding & transition: 1 week</li>
+</ul>
+
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">

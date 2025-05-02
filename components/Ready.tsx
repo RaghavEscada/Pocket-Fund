@@ -8,7 +8,8 @@ import { useScroll, useTransform, motion } from "framer-motion";
 
 export default function Ready() {
 	const container = useRef(null);
-	const phrase = ["Ready", "to start", "the project"];
+	const phrase = ["Geared up", "for the next", "acquisition"];
+
 
 	const { scrollYProgress } = useScroll({
 		target: container,
@@ -28,24 +29,19 @@ export default function Ready() {
 				</div>
 				<div className="flex flex-col  items-center gap-[10px]">
 					<div className="flex items-center justify-between bg-secondry cursor-pointer rounded-full group">
-						<RoundButton
-							href="/contact"
-							title="start the project"
-							className="bg-white text-black"
-							bgcolor="#000"
-							style={{ color: "#fff" }}
-						/>
+						
 					</div>
-					<p className="text-[20px] font-NeueMontreal text-secondry">OR</p>
+				
 					<div className="flex items-center justify-between bg-transparent cursor-pointer rounded-full group border border-[#212121]">
 						<Link
 							className="xl:text-[18px] xl:leading-[28px] text-[14px] leading-[24px] uppercase font-normal font-NeueMontreal"
-							href="/contact">
+							href="https://wa.me/+919820059357?text=Dear%20Dev%20Shah%2C%20I%20hope%20you%20are%20doing%20well.%20I%20am%20interested%20in%20learning%20more%20about%20your%20VC%20firm%20and%20ongoing%20projects.%20Could%20you%20please%20provide%20more%20details%20or%20let%20me%20know%20a%20suitable%20time%20to%20discuss%20further%3F%20Looking%20forward%20to%20your%20response.%20Best%20regards%2C%20Client">
 							<Rounded
 								className="py-[6px]"
 								backgroundColor="#212121">
 								<p className="z-10 px-[10px] ml-[15px] py-[6px] group-hover:text-white text-black">
-								connect@revlient.com
+								maildevshah15@gmail.com 
+
 								</p>
 								<div className="bg-black group-hover:bg-white text-black p-[10px] rounded-full scale-[0.3] mr-[10px] group-hover:scale-[0.9] transition-all z-10 transform duration-[0.3s] ease-[.215,.61,.355,1]">
 									<ArrowUpRight

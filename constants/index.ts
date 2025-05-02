@@ -7,7 +7,7 @@ export const navbarItems = [
    {
       id: 5,
       title: "Contact us",
-      href: "/contact",
+      href: "https://wa.me/+919820059357?text=Dear%20Dev%20Shah%2C%20I%20hope%20you%20are%20doing%20well.%20I%20am%20interested%20in%20learning%20more%20about%20your%20VC%20firm%20and%20ongoing%20projects.%20Could%20you%20please%20provide%20more%20details%20or%20let%20me%20know%20a%20suitable%20time%20to%20discuss%20further%3F%20Looking%20forward%20to%20your%20response.%20Best%20regards%2C%20Client",
    },
   
 ];
@@ -18,42 +18,25 @@ export const footerItems = [
    {
       id: 1,
       title: "Instagram",
-      href: "https://www.instagram.com/revlient/",
+      href: "https://www.instagram.com/pocketfund/",
    },
 
    {
       id: 4,
       title: "Linkedin",
-      href: "https://www.linkedin.com/in/devjithanoop?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      href: "https://www.linkedin.com/company/96887155/",
    },
 ];
 
 export const footernavbarItems = [
-   {
-      id: 1,
-      title: "Home",
-      href: "/",
-   },
-   {
-      id: 2,
-      title: "Services",
-      href: "/services",
-   },
-   {
-      id: 3,
-      title: "Our work",
-      href: "/rev-works",
-   },
-   {
-      id: 4,
-      title: "Team",
-      href: "/rev-team",
-   },
+  
+  
+
   
    {
       id: 6,
       title: "Contact us",
-      href: "/contact",
+     href:"https://wa.me/+919820059357?text=Dear%20Dev%20Shah%2C%20I%20hope%20you%20are%20doing%20well.%20I%20am%20interested%20in%20learning%20more%20about%20your%20VC%20firm%20and%20ongoing%20projects.%20Could%20you%20please%20provide%20more%20details%20or%20let%20me%20know%20a%20suitable%20time%20to%20discuss%20further%3F%20Looking%20forward%20to%20your%20response.%20Best%20regards%2C%20Client",
    },
    
 ];
@@ -62,81 +45,61 @@ export const footernavbarItems = [
 export const projectItem = [
    {
       id: 1,
-      title: "SOUMYA SHYAM",
-      href: "https://www.soumyashyammakeup.com/main/about.html",
+      title: "Sourcely AI",
+      href: "https://www.sourcely.net",
       src: project1,
       links: [
         
          {
             id: 2,
-            title: "Website Development",
-            href: "/services",
+            title: " An AI-powered student productivity tool",
+            href: "/",
          },
         
-         {
-            id: 4,
-            title: "Creative Content",
-            href: "/services",
-         },
+       
       ]
    },
    {
       id: 2,
-      title: "NUTRI BOX",
-      href: "https://www.nutriboxx.co.in/",
+      title: "Galaxy Loot",
+      href: "https://www.jeditimes.com",
       src: project2,
       links: [
          {
             id: 1,
-            title: "Brand Identity",
-            href: "/services",
+            title: "A Star Wars-themed media business",
+            href: "/",
          },
-         {
-            id: 2,
-            title: "Website Development",
-            href: "/services",
-         },
+        
       ]
    },
    {
       id: 3,
-      title: "BAMBRUSH",
-      href: "/case/",
+      title: "Finance Grep",
+      href: "/case",
       src: project3,
       links: [
          {
             id: 1,
-            title: "3D Design",
-            href: "/services",
+            title: "Finance prep application",
+            href: "/",
          },
-         {
-            id: 2,
-            title: "Website development",
-            href: "/services",
-         },
-         {
-            id: 3,
-            title: "Creative content & seo",
-            href: "/services",
-         },
+        
+       
       ]
    },
    {
       id: 4,
-      title: "KALEIDO SOLUTIONS",
+      title: "Jobless",
       href: "/case/",
       src: project4,
       links: [
          {
             id: 1,
-            title: "website development",
-            href: "/services",
+            title: "Newsletter",
+            href: "/",
          },
-         {
-            id: 1,
-            title: "creative content & seo",
-            href: "/services",
-         },
+      
       ]
    },
 ];

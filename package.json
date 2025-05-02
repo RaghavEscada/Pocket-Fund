@@ -9,6 +9,7 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@react-three/fiber": "^9.1.2",
 		"@splinetool/react-spline": "^3.1.1",
 		"@splinetool/runtime": "^1.9.82",
 		"@tabler/icons-react": "^3.31.0",
@@ -16,6 +17,7 @@
 		"@tsparticles/react": "^3.0.0",
 		"@tsparticles/slim": "^3.8.1",
 		"@types/locomotive-scroll": "^4.1.3",
+		"@types/three": "^0.176.0",
 		"clsx": "^2.1.1",
 		"cobe": "^0.6.3",
 		"framer-motion": "^11.0.25",
@@ -31,7 +33,8 @@
 		"react-intersection-observer": "^9.8.1",
 		"sharp": "^0.33.3",
 		"simplex-noise": "^4.0.3",
-		"tailwind-merge": "^3.0.2"
+		"tailwind-merge": "^3.0.2",
+		"three": "^0.176.0"
 	},
 	"devDependencies": {
 		"@types/node": "^20",

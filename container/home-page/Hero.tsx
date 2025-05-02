@@ -23,12 +23,13 @@ export default function Hero() {
 
   // Animation data for funding rounds
   const fundingRounds = [
-    { amount: "$25K", company: "Pixel Pet", type: "E-commerce" },
-    { amount: "$80K", company: "Nomad Tools", type: "SaaS" },
-    { amount: "$50K", company: "Brew Box", type: "Subscription" },
-    { amount: "$75K", company: "Code Canvas", type: "Ed-Tech" },
-    { amount: "$40K", company: "Green Cart", type: "Marketplace" },
+    { amount: "$4K", company: "Sourcely AI", type: "SaaS" },
+    { amount: "$3K", company: "Galaxy Loot", type: "SaaS" },
+    { amount: "$5K", company: "Finance Grep", type: "Finance" },
+    { amount: "$8K", company: "Ana", type: "SaaS" },
+    { amount: "$4K", company: "Jedi Times", type: "SaaS" },
   ];
+  
 
   useEffect(() => {
     // Check if device is mobile
@@ -188,7 +189,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <Link
-            href="/pitch"
+             href="https://wa.me/+919820059357?text=Dear%20Dev%20Shah%2C%20I%20hope%20you%20are%20doing%20well.%20I%20am%20interested%20in%20learning%20more%20about%20your%20VC%20firm%20and%20ongoing%20projects.%20Could%20you%20please%20provide%20more%20details%20or%20let%20me%20know%20a%20suitable%20time%20to%20discuss%20further%20on%20my%company%3F%20Looking%20forward%20to%20your%20response.%20Best%20regards%2C%20Client"
             className="inline-block bg-[#4070FF] hover:bg-[#3060EB] text-white px-10 py-4 rounded-md text-base font-bold transition-colors shadow-md"
           >
             Pitch Your Business
