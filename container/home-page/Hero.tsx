@@ -98,20 +98,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Investment metrics animation */}
-        <motion.div
-          className="absolute bottom-40 left-20 bg-white/80 backdrop-blur-sm border border-[#4070FF]/15 rounded-md px-5 py-3 shadow-lg"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{
-            opacity: contentReady ? 1 : 0,
-            y: contentReady ? 0 : 40,
-          }}
-          transition={{ duration: 0.6, delay: 1.2 }}
-        >
-          <div className="flex items-center space-x-2">
-            <div className="h-2 w-2 rounded-full bg-green-500"></div>
-            <div className="text-sm font-semibold text-[#111827]">Portfolio Performance: +24% YTD</div>
-          </div>
-        </motion.div>
+       
       </div>
 
       {/* Content with centered text - adjusted positioning */}
@@ -138,8 +125,8 @@ export default function Hero() {
           animate={{ opacity: contentReady ? 1 : 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
         >
-          <h2 className="text-xl md:text-2xl font-bold tracking-wide text-[#111827]">DEV SHAH</h2>
-          <p className="text-sm tracking-widest text-[#374151]">Exclusive</p>
+          <h2 className="text-xl md:text-2xl font-bold tracking-wide text-[#111827]">POCKET FUND</h2>
+          <p className="text-sm tracking-widest text-[#374151]">Micro Private Equity Firm</p>
         </motion.div>
 
         {/* Elegant divider */}
@@ -209,7 +196,7 @@ const AnimatedDeals = ({ fundingRounds, currentStep }: AnimatedDealsProps) => {
 
   return (
     <div className="flex flex-col">
-      <div className="text-xs uppercase tracking-wider text-[#374151] font-medium mb-1">Recent Investment</div>
+      <div className="text-xs uppercase tracking-wider text-[#374151] font-medium mb-1">New Deal Found</div>
       <motion.div
         key={currentStep}
         initial={{ opacity: 0, y: 10 }}

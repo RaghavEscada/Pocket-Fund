@@ -1,7 +1,7 @@
 import { projectItem } from "@/constants";
 import { Heading, ProjectCard, RoundButton, Tags } from "@/components";
 import { FeaturesSectionDemo } from "@/components/ui/bentogrid";
-import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
+
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 
@@ -51,12 +51,8 @@ export default function Projects() {
 
     
 
-      <div className="pt-20">
-        <h3 className="text-5xl font-semibold text-center mb-16">
-          Before & After Acquisitions
-        </h3>
-        <CanvasRevealEffectDemo />
-      </div>
+    
+       
 	    <div className="pt-20">
         <FeaturesSectionDemo />
       </div>
@@ -80,7 +76,7 @@ export function CanvasRevealEffectDemo() {
             </p>
           </div>
         }  icon={<AceternityIcon />}>
-        <CanvasRevealEffect animationSpeed={5.1} containerClassName="bg-black" />
+       
       </Card>
       <Card  title={
           <div className="text-center">
@@ -97,7 +93,7 @@ export function CanvasRevealEffectDemo() {
             </p>
           </div>
         }  icon={<AceternityIcon />}>
-        <CanvasRevealEffect animationSpeed={5.1} containerClassName="bg-emerald-900" />
+      
       </Card>
       
     </div>

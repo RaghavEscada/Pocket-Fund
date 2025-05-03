@@ -4,7 +4,7 @@ import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import { LampContainer } from "@/components/ui/lamp";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
-import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
+import { MacbookScroll } from "@/components/ui/macbookscroll";
 
 
 
@@ -59,88 +59,150 @@ export function AnimatedTestimonialsDemo() {
 export function TimelineDemo() {
   const data = [
     {
-      title: "1. Source: Spot Hidden Winners",
+      title: "2024",
       content: (
         <div>
-          <p className="text-white dark:text-white text-lg md:text-xl font-normal mb-8">
-            We actively hunt down underpriced digital assets — micro-SaaS, niche content sites, or indie tools under $5,000 — with untapped utility, lean ops, and a clear path to profitability. 
-            We're not looking for noise — we're looking for signals that scream: "This can grow."
+          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            Built and launched Aceternity UI and Aceternity UI Pro from scratch
           </p>
-          <div className="flex justify-end gap-4">
-            <Image src="/1.jpeg" alt="Deal Sourcing" width={250} height={250} layout="intrinsic" />
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://assets.aceternity.com/templates/startup-1.webp"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/templates/startup-2.webp"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/templates/startup-3.webp"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/templates/startup-4.webp"
+              alt="startup template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
           </div>
         </div>
       ),
     },
     {
-      title: "2. Evaluate: Analyze Like a Machine, Decide Like a Human",
+      title: "Early 2023",
       content: (
         <div>
-          <p className="text-white dark:text-white text-lg md:text-xl font-normal mb-8">
-            Within 48–72 hours, we break down product stickiness, user love, monetization mechanics, traffic sources, and growth headroom. 
-            We're obsessed with clarity — and only pursue assets with margin for operational alchemy and exponential return.
+          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            I usually run out of copy, but when I see content this big, I try to
+            integrate lorem ipsum.
           </p>
-          <div className="flex justify-end gap-4">
-            <Image src="/2.jpeg" alt="Due Diligence" width={250} height={250} layout="intrinsic" />
+          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            Lorem ipsum is for people who are too lazy to write copy. But we are
+            not. Here are some more example of beautiful designs I built.
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://assets.aceternity.com/pro/hero-sections.png"
+              alt="hero template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/features-section.png"
+              alt="feature template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/pro/bento-grids.png"
+              alt="bento template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/cards.png"
+              alt="cards template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
           </div>
         </div>
       ),
     },
     {
-      title: "3. Acquire: Move Fast. Stay Clean.",
+      title: "Changelog",
       content: (
         <div>
-          <p className="text-white dark:text-white text-lg md:text-xl font-normal mb-8">
-            We present founders with clear, no-fluff offers. No slow negotiations. No red tape. Deals close in 1–2 weeks with founder-friendly terms and complete transparency.
-            We're the team founders actually like selling to.
-          </p>
-          <div className="flex justify-end gap-4">
-            <Image src="/3.jpeg" alt="Acquisition" width={250} height={250} layout="intrinsic" />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "4. Operate: Rebuild. Automate. Elevate.",
-      content: (
-        <div>
-          <p className="text-white dark:text-white text-lg md:text-xl font-normal mb-8">
-            Our team dives in post-transition. We streamline ops, automate busywork, refresh the brand, and inject new life through content engines, UX tweaks, and CRO. 
-            Think of it as a lean startup reboot — minus the burn.
-          </p>
-          <div className="flex justify-end gap-4">
-            <Image src="/au.png" alt="Operations" width={250} height={250} layout="intrinsic" />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "5. Exit or Scale: ROI Unlocked",
-      content: (
-        <div>
-          <p className="text-white dark:text-white text-lg md:text-xl font-normal mb-4">
-            With performance optimized, we choose one of two paths: exit for 2x–10x returns or hold and compound monthly cash flow. Either way, the asset pays back — fast and clean.
+          <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            Deployed 5 new components on Aceternity today
           </p>
           <div className="mb-8">
-            <div className="flex gap-2 items-center text-white text-lg md:text-xl">
-              🚀 Strategic Exits to Operator-VCs or Marketplaces
+            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              ✅ Card grid component
             </div>
-            <div className="flex gap-2 items-center text-white text-lg md:text-xl">
-              💸 Compound Cash Flow for Passive Yield
+            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              ✅ Startup template Aceternity
             </div>
-            <div className="flex gap-2 items-center text-white text-lg md:text-xl">
-              🔁 Capital Recycled into New Growth Bets
+            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              ✅ Random file upload lol
+            </div>
+            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              ✅ Himesh Reshammiya Music CD
+            </div>
+            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              ✅ Salman Bhai Fan Club registrations open
             </div>
           </div>
-          <div className="flex justify-end gap-4">
-            <Image src="/roi.png" alt="Exit Strategy" width={250} height={250} layout="intrinsic" />
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://assets.aceternity.com/pro/hero-sections.png"
+              alt="hero template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/features-section.png"
+              alt="feature template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/pro/bento-grids.png"
+              alt="bento template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://assets.aceternity.com/cards.png"
+              alt="cards template"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+            />
           </div>
         </div>
       ),
     },
   ];
   return (
-    <div className="w-full bg-gray-900 p-8 rounded-xl">
+    <div className="relative w-full overflow-clip">
       <Timeline data={data} />
     </div>
   );
@@ -356,117 +418,70 @@ export function BackgroundGradientDemo() {
   );
 }
 
-export function CanvasRevealEffectDemo() {
+
+
+export default function MacbookScrollDemo() {
   return (
-    <>
-      <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
-        <Card title="Sourcely AI 
-        before a" icon={<AceternityIcon />}>
-          <CanvasRevealEffect
-            animationSpeed={5.1}
-            containerClassName="bg-emerald-900"
-          />
-        </Card>
-        <Card title="Nishajj is Munni" icon={<AceternityIcon />}>
-          <CanvasRevealEffect
-            animationSpeed={3}
-            containerClassName="bg-black"
-            colors={[
-              [236, 72, 153],
-              [232, 121, 249],
-            ]}
-            dotSize={2}
-          />
-          {/* Radial gradient for the cute fade */}
-          <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
-        </Card>
-       
-      </div>
-    </>
-  );
-}
- 
-const Card = ({
-  title,
-  icon,
-  children,
-}: {
-  title: string;
-  icon: React.ReactNode;
-  children?: React.ReactNode;
-}) => {
-  const [hovered, setHovered] = React.useState(false);
-  return (
-    <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative h-[30rem] relative"
-    >
-      <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
- 
-      <AnimatePresence>
-        {hovered && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="h-full w-full absolute inset-0"
-          >
-            {children}
-          </motion.div>
-        )}
-      </AnimatePresence>
- 
-      <div className="relative z-20">
-        <div className="text-center group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0 transition duration-200 w-full  mx-auto flex items-center justify-center">
-          {icon}
-        </div>
-        <h2 className="dark:text-white text-xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200">
-          {title}
-        </h2>
-      </div>
+    <div className="overflow-hidden dark:bg-[#0B0B0F] bg-white w-full">
+      <MacbookScroll
+        title={
+          <span className="font-family: 'Arial', sans-serif; font-size: 2rem; font-weight: bold; color: #333; line-height: 1.5; background: linear-gradient(to right, #00c6ff, #0072ff); padding: 10px 20px; border-radius: 8px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
+          We pocket the coolest stuff at <br />
+          <span className="color: #fff; text-transform: uppercase; font-size: 2.5rem;">Pocket Fund</span>
+      </span>
+      
+        }
+        badge={
+          <a href="https://peerlist.io/manuarora">
+            <Badge className="h-10 w-10 transform -rotate-12" />
+          </a>
+        }
+        src={`/linear.webp`}
+        showGradient={false}
+      />
     </div>
-  );
-};
- 
-const AceternityIcon = () => {
+  )
+}
+// Peerlist logo
+const Badge = ({ className }: { className?: string }) => {
   return (
     <svg
-      width="66"
-      height="65"
-      viewBox="0 0 66 65"
+      width="24"
+      height="24"
+      viewBox="0 0 56 56"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="h-10 w-10 text-black dark:text-white group-hover/canvas-card:text-white "
+      className={className}
     >
       <path
-        d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
-        stroke="currentColor"
-        strokeWidth="15"
-        strokeMiterlimit="3.86874"
-        strokeLinecap="round"
-        style={{ mixBlendMode: "darken" }}
-      />
+        d="M56 28C56 43.464 43.464 56 28 56C12.536 56 0 43.464 0 28C0 12.536 12.536 0 28 0C43.464 0 56 12.536 56 28Z"
+        fill="#00AA45"
+      ></path>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M28 54C42.3594 54 54 42.3594 54 28C54 13.6406 42.3594 2 28 2C13.6406 2 2 13.6406 2 28C2 42.3594 13.6406 54 28 54ZM28 56C43.464 56 56 43.464 56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56Z"
+        fill="#219653"
+      ></path>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M27.0769 12H15V46H24.3846V38.8889H27.0769C34.7305 38.8889 41 32.9048 41 25.4444C41 17.984 34.7305 12 27.0769 12ZM24.3846 29.7778V21.1111H27.0769C29.6194 21.1111 31.6154 23.0864 31.6154 25.4444C31.6154 27.8024 29.6194 29.7778 27.0769 29.7778H24.3846Z"
+        fill="#24292E"
+      ></path>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M18 11H29.0769C36.2141 11 42 16.5716 42 23.4444C42 30.3173 36.2141 35.8889 29.0769 35.8889H25.3846V43H18V11ZM25.3846 28.7778H29.0769C32.1357 28.7778 34.6154 26.39 34.6154 23.4444C34.6154 20.4989 32.1357 18.1111 29.0769 18.1111H25.3846V28.7778Z"
+        fill="white"
+      ></path>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M17 10H29.0769C36.7305 10 43 15.984 43 23.4444C43 30.9048 36.7305 36.8889 29.0769 36.8889H26.3846V44H17V10ZM19 12V42H24.3846V34.8889H29.0769C35.6978 34.8889 41 29.7298 41 23.4444C41 17.1591 35.6978 12 29.0769 12H19ZM24.3846 17.1111H29.0769C32.6521 17.1111 35.6154 19.9114 35.6154 23.4444C35.6154 26.9775 32.6521 29.7778 29.0769 29.7778H24.3846V17.1111ZM26.3846 19.1111V27.7778H29.0769C31.6194 27.7778 33.6154 25.8024 33.6154 23.4444C33.6154 21.0864 31.6194 19.1111 29.0769 19.1111H26.3846Z"
+        fill="#24292E"
+      ></path>
     </svg>
-  );
-};
- 
-export const Icon = ({ className, ...rest }: any) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth="1.5"
-      stroke="currentColor"
-      className={className}
-      {...rest}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
-    </svg>
-  );
-};
-
+  )
+}
 
