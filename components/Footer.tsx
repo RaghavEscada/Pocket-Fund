@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { LinkHover, TextMask } from "@/animation";
 import { footerItems } from "@/constants";
+import { FaPhone } from "react-icons/fa";
 
 
 export default function Footer() {
@@ -61,10 +62,7 @@ export default function Footer() {
                   className="text-green-600 font-bold text-lg hover:underline transition-all duration-300 flex items-center space-x-2"
                 >
                   <span>+91 98200 59357</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                    <path d="M5.339 21.32l.707 2.573-2.741-.708c-1.121-.289-2.052-.854-2.799-1.6-1.401-1.401-2.172-3.267-2.172-5.252s.771-3.85 2.172-5.252c1.401-1.401 3.267-2.172 5.252-2.172s3.85.771 5.252 2.172c1.401 1.401 2.172 3.267 2.172 5.252s-.771 3.85-2.172 5.252c-.747.747-1.677 1.311-2.799 1.6l-2.741.708.879-2.573z" fill-rule="nonzero"/>
-                  </svg>
+                 <FaPhone/>
                 </a>
               </div>
               
@@ -92,16 +90,18 @@ export default function Footer() {
       
       {/* Bottom Section - Logo and Legal */}
       <div className="w-full pt-16 pb-8 border-t border-gray-800 grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-20">
-        {/* Logo */}
+        {/* Logo with White Box */}
         <div>
           <Link href="/" className="block transition-opacity duration-300 hover:opacity-80">
-            <Image
-              src="/pf.png"
-              alt="pf logo"
-              width={180}
-              height={60}
-              className="w-auto h-auto"
-            />
+            <div className="bg-white p-1 rounded-lg inline-block">
+              <Image
+                src="/pf.png"
+                alt="pf logo"
+                width={180}
+                height={60}
+                className="w-auto h-auto"
+              />
+            </div>
           </Link>
         </div>
         

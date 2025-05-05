@@ -59,45 +59,46 @@ export function AnimatedTestimonialsDemo() {
 export function TimelineDemo() {
   const data = [
     {
-      title: "2024",
+      title: "Deal Sourcing",
       content: (
-        <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Built and launched Aceternity UI and Aceternity UI Pro from scratch
-          </p>
-          <div className="grid grid-cols-2 gap-4">
+        <div className="flex items-center space-x-8">
+          <div className="flex-1">
+            <p className="mb-8 text-lg font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+              📊 **Deal Sourcing: The Heart of Business Growth** 🚀
+              <br />
+              <br />
+              Deal sourcing is the art and science of finding high-potential investment opportunities, acquisitions, and partnerships that drive growth and innovation. Whether you're an investor, a venture capitalist, or a business development professional, effective deal sourcing is the key to success in a competitive market. 🌟
+              <br />
+              <br />
+              **Why is Deal Sourcing Important?** 🤔
+              <ul>
+                <li>Maximizing Returns 💸: Identifying high-quality opportunities that provide maximum returns.</li>
+                <li>Building Strong Networks 🌐: Expanding your network to tap into new opportunities.</li>
+                <li>Diversification of Portfolio 🏦: Ensuring a resilient portfolio by sourcing across multiple sectors.</li>
+              </ul>
+              <br />
+              **Key Steps in Deal Sourcing** 🔍:
+              <ul>
+                <li>Market Research 🔬: Stay updated on emerging trends and disruptors.</li>
+                <li>Networking & Relationship Building 🗣️: Build strong relationships with entrepreneurs and investors.</li>
+                <li>Screening Opportunities ✅: Rigorous screening ensures only the right deals make it to your portfolio.</li>
+                <li>Negotiation 💬: Solid negotiation skills ensure win-win deals for both parties.</li>
+              </ul>
+            </p>
+          </div>
+          <div>
             <img
-              src="https://assets.aceternity.com/templates/startup-1.webp"
+              src="hand.gif"
               alt="startup template"
               width={500}
               height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/templates/startup-2.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/templates/startup-3.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/templates/startup-4.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+              className="w-[500px] h-[500px] rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
           </div>
         </div>
       ),
-    },
+    }
+,    
     {
       title: "Early 2023",
       content: (

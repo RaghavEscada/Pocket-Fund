@@ -8,7 +8,7 @@ import { useScroll, useTransform, motion } from "framer-motion";
 
 export default function Ready() {
 	const container = useRef(null);
-	const phrase = ["Geared up", "for the next", "acquisition"];
+	const phrase = ["We are","Geared up", "for the next", "acquisition"];
 
 
 	const { scrollYProgress } = useScroll({
@@ -19,16 +19,16 @@ export default function Ready() {
 
 	return (
 		<section
-			className="w-full text-white relative z-30 min-h-screen sm:h-screen xm:h-screen bg-slate-300 padding-y rounded-t-[20px] mt-[-20px]"
+			className="w-full text-black relative z-30 min-h-screen sm:h-screen xm:h-screen bg-secondary padding-y rounded-t-[20px] mt-[-20px]"
 			ref={container}>
 			<div className="w-full h-full flex justify-center gap-[50px] items-center flex-col">
 				<div className="flex flex-col gap-[10px]">
-					<h1 className="text-[290px] leading-[230px] lg:text-[220px] lg:leading-[170px] md:text-[180px] md:leading-[140px] sm:text-[120px] sm:leading-[90px] xm:text-[80px] xm:leading-[60px] tracking-[-2.5px] text-center font-bold font-FoundersGrotesk text-secondry uppercase pointer-events-none">
+					<h1 className="text-[290px] leading-[230px] lg:text-[220px] lg:leading-[170px] md:text-[180px] md:leading-[140px] sm:text-[120px] sm:leading-[90px] xm:text-[80px] xm:leading-[60px] tracking-[-2.5px] text-center font-bold font-FoundersGrotesk text-black uppercase pointer-events-none">
 						<TextMask>{phrase}</TextMask>
 					</h1>
 				</div>
 				<div className="flex flex-col  items-center gap-[10px]">
-					<div className="flex items-center justify-between bg-secondry cursor-pointer rounded-full group">
+					<div className="flex items-center justify-between bg-black cursor-pointer rounded-full group">
 						
 					</div>
 				
@@ -43,7 +43,7 @@ export default function Ready() {
 								maildevshah15@gmail.com 
 
 								</p>
-								<div className="bg-black group-hover:bg-white text-black p-[10px] rounded-full scale-[0.3] mr-[10px] group-hover:scale-[0.9] transition-all z-10 transform duration-[0.3s] ease-[.215,.61,.355,1]">
+								<div className="bg-green-400 group-hover:bg-white text-black p-[10px] rounded-full scale-[0.3] mr-[10px] group-hover:scale-[0.9] transition-all z-10 transform duration-[0.3s] ease-[.215,.61,.355,1]">
 									<ArrowUpRight
 										strokeWidth={1.5}
 										size={30}
