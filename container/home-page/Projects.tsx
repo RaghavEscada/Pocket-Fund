@@ -9,7 +9,7 @@ export default function Projects() {
   const compareData = [
     {
       name: "Sourcely AI",
-      description: "From stealth mode to scaling with over 100 global enterprise clients—powered by AI-driven sourcing tech."
+      description: "Sourcely is your AI-powered academic search assistant, offering access to over 200 million papers and advanced search filters. It streamlines research by finding credible sources, summarizing them, and exporting citations instantly—helping you save time and improve quality."
     },
     {
       name: "NewsFlow Media",

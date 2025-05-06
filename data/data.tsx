@@ -570,7 +570,7 @@ export default function MacbookScrollDemo() {
       
         }
         badge={
-          <a href="https://peerlist.io/manuarora">
+          <a href="https://peerlist.io/raghavkrishna">
             <Badge className="h-10 w-10 transform -rotate-12" />
           </a>
         }
