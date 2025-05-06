@@ -4,7 +4,7 @@ import {
   useScroll,
   useTransform,
   motion,
-  
+  MotionValue
 } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -48,16 +48,21 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     }
   });
 
-  // Create an array of progress values for each section
-  const sectionProgressValues = data.map((_, i) => {
+  // Create all the section progress transforms at the top level
+  // Instead of creating them in a map function
+  const sectionProgressValues: MotionValue<number>[] = [];
+  
+  for (let i = 0; i < data.length; i++) {
     const start = i / data.length;
     const end = (i + 1) / data.length;
-    return useTransform(
-      scrollYProgress,
-      [start, start + 0.1, end - 0.1, end],
-      [0, 1, 1, 0]
+    sectionProgressValues.push(
+      useTransform(
+        scrollYProgress,
+        [start, start + 0.1, end - 0.1, end],
+        [0, 1, 1, 0]
+      )
     );
-  });
+  }
 
   return (
     <div
