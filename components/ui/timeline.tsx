@@ -4,7 +4,7 @@ import {
   useScroll,
   useTransform,
   motion,
-  MotionValue
+
 } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -48,21 +48,45 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     }
   });
 
-  // Create all the section progress transforms at the top level
-  // Instead of creating them in a map function
-  const sectionProgressValues: MotionValue<number>[] = [];
+  // Always define a maximum number of hooks unconditionally
+  // We'll use a constant for maximum supported sections - this avoids conditionals
+  const MAX_SECTIONS = 10;
   
-  for (let i = 0; i < data.length; i++) {
-    const start = i / data.length;
-    const end = (i + 1) / data.length;
-    sectionProgressValues.push(
-      useTransform(
-        scrollYProgress,
-        [start, start + 0.1, end - 0.1, end],
-        [0, 1, 1, 0]
-      )
-    );
-  }
+  // Calculate section bounds arrays for each possible section
+  const sectionBounds = Array.from({ length: MAX_SECTIONS }, (_, i) => {
+    const start = i / Math.max(1, data.length);
+    const end = (i + 1) / Math.max(1, data.length);
+    return [start, start + 0.1, end - 0.1, end];
+  });
+  
+  // Create transform hooks unconditionally for each possible section
+  const section0Progress = useTransform(scrollYProgress, sectionBounds[0], [0, 1, 1, 0]);
+  const section1Progress = useTransform(scrollYProgress, sectionBounds[1], [0, 1, 1, 0]);
+  const section2Progress = useTransform(scrollYProgress, sectionBounds[2], [0, 1, 1, 0]);
+  const section3Progress = useTransform(scrollYProgress, sectionBounds[3], [0, 1, 1, 0]);
+  const section4Progress = useTransform(scrollYProgress, sectionBounds[4], [0, 1, 1, 0]);
+  const section5Progress = useTransform(scrollYProgress, sectionBounds[5], [0, 1, 1, 0]);
+  const section6Progress = useTransform(scrollYProgress, sectionBounds[6], [0, 1, 1, 0]);
+  const section7Progress = useTransform(scrollYProgress, sectionBounds[7], [0, 1, 1, 0]);
+  const section8Progress = useTransform(scrollYProgress, sectionBounds[8], [0, 1, 1, 0]);
+  const section9Progress = useTransform(scrollYProgress, sectionBounds[9], [0, 1, 1, 0]);
+  
+  // Put all progress values in an array for easy access
+  const allSectionProgressValues = [
+    section0Progress,
+    section1Progress,
+    section2Progress,
+    section3Progress,
+    section4Progress,
+    section5Progress,
+    section6Progress,
+    section7Progress,
+    section8Progress,
+    section9Progress,
+  ];
+  
+  // Select only the ones we need (but the hooks are all still called)
+  const sectionProgressValues = allSectionProgressValues.slice(0, data.length);
 
   return (
     <div
@@ -137,7 +161,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               {/* Year marker */}
               <motion.div 
                 className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full"
-                style={{ opacity: sectionProgressValues[index] }}
+                style={{ opacity: sectionProgressValues[index] || 0 }}
               >
                 <div className="relative w-16 h-16">
                   {/* Outer circle with pulsing animation */}
@@ -169,7 +193,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               {/* Content */}
               <motion.div 
                 className="relative pl-20 pr-4 md:pl-4 w-full"
-                style={{ opacity: sectionProgressValues[index] }}
+                style={{ opacity: sectionProgressValues[index] || 0 }}
               >
                 <motion.h3 
                   className={`md:hidden block text-3xl mb-6 text-left font-bold ${isActive ? 'text-white' : 'text-gray-600'}`}
