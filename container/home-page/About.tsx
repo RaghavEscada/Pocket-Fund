@@ -145,7 +145,7 @@ export default function About() {
         </p>
 
         <div className="p-6 max-w-6xl mx-auto">
-      <h2 className="text-2xl font-bold mb-6 text-center text-white">Investment Focus</h2>
+     
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {investmentFocus.map((item) => (
           <div
@@ -271,7 +271,7 @@ export default function About() {
       {/* Timeline Preview - Creative Dashboard Design */}
       <div className="max-w-6xl mx-auto mb-32 px-4">
         <h3 className="text-4xl md:text-5xl font-semibold text-center mb-8 text-blue-500">
-          Deal Speed
+          Deal Sourcing
         </h3>
         <p className="text-center text-xl max-w-4xl mx-auto mb-12 text-gray-300">
           We move quickly and efficiently through every step of the acquisition process
@@ -299,22 +299,7 @@ export default function About() {
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/5 rounded-full filter blur-3xl"></div>
             
             {/* Speed gauge - decorative */}
-            <div className="mb-12 relative flex justify-center">
-              <div className="relative w-48 h-24 overflow-hidden">
-                <div className="absolute inset-0 bg-gray-800 rounded-t-full"></div>
-                <div className="absolute bottom-0 left-0 right-0 h-full bg-gradient-to-t from-blue-500/20 to-purple-500/10 rounded-t-full"></div>
-                
-                {/* Speed needle */}
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 origin-bottom rotate-[60deg] w-1 h-20 bg-gradient-to-t from-blue-400 to-blue-500 rounded-full shadow-lg z-10"></div>
-                
-                {/* Center point */}
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full shadow-lg z-20"></div>
-                
-                {/* Speed markers */}
-                <div className="absolute bottom-2 left-4 text-xs text-gray-400">Slow</div>
-                <div className="absolute bottom-2 right-4 text-xs text-gray-400">Fast</div>
-              </div>
-            </div>
+           
             
             {/* Timeline steps as process blocks */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

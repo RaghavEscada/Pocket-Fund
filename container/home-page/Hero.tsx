@@ -9,7 +9,7 @@ interface FundingRound {
   title: string;
   summary: string;
   askingPrice: string;
-  rating: string;
+ 
   link: string;
 }
 
@@ -27,62 +27,53 @@ export default function Hero() {
   const fundingRounds: FundingRound[] = [
     {
       title: "Round A - SaaS Startup for B2B Mockup Creation (UAE)",
-      summary: "Online platform enabling B2B marketers to create visuals for Print on Demand & Digital Out of Home ads. Built with Node.js, MongoDB, AWS. Revenue: $45k/mo. Profit: $0.",
+      summary: "B2B online mockup creation platform",
       askingPrice: "$2M",
-      rating: "8/10",
       link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
     {
       title: "Round B - AI-Driven Email Outreach SaaS",
-      summary: "AI-powered cold email tool built on Laravel, AngularJS, Node.js. Automates outreach with inbox rotation, personalization. Revenue: $1k/mo, Profit: $900.",
+      summary: "AI cold email automation tool",
       askingPrice: "$70k",
-      rating: "9/10",
       link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
     {
       title: "Round C - SaaS Startup for AI Interior Design",
-      summary: "Transform room photos into designs using AI. Built with Vercel, MySQL, NextJS. 7,800+ users. Revenue & profit: $1k/mo. No marketing spend.",
+      summary: "AI transforms photos into designs",
       askingPrice: "$73k",
-      rating: "9/10",
       link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
     {
       title: "Round D - SaaS Startup for B2B Mockup Creation (Estonia)",
-      summary: "Estonian mockup API platform. Node.js, MongoDB, AWS. $45k revenue last month but $0 profit. Competes with Placeit and Smartmockups.",
+      summary: "Estonian B2B mockup API platform",
       askingPrice: "$2M",
-      rating: "8/10",
       link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
     {
       title: "Round E - AI Resume Builder SaaS",
-      summary: "Smart resume builder powered by AI for job seekers and recruiters. Generates ATS-friendly resumes in seconds. 12k users, 85% returning rate.",
+      summary: "AI-powered ATS-friendly resume builder",
       askingPrice: "$50k",
-      rating: "8.7/10",
       link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
     {
       title: "Round F - No-Code Website Builder for Creators",
-      summary: "Drag-and-drop website builder tailored for influencers and creators. Built on React & Firebase. $3k/mo revenue with strong organic traffic.",
+      summary: "Website builder for content creators",
       askingPrice: "$120k",
-      rating: "8.9/10",
       link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
     {
       title: "Round G - Mental Health Companion App (AI-based)",
-      summary: "AI chatbot for real-time emotional support. Used by 40+ institutions. Built with Flutter & GPT API. $5k MRR. Viral potential.",
+      summary: "AI chatbot for emotional support",
       askingPrice: "$150k",
-      rating: "9.2/10",
       link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
     {
       title: "Round H - AI-Powered Legal Assistant SaaS",
-      summary: "SaaS platform for drafting and reviewing contracts using LLMs. Targeted at legal firms and startups. $10k MRR with 20 paying clients.",
+      summary: "AI contract drafting legal platform",
       askingPrice: "$200k",
-      rating: "9.3/10",
       link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
   ];
-  
 
   useEffect(() => {
     // Check if device is mobile
@@ -257,8 +248,13 @@ const AnimatedDeals = ({ fundingRounds, currentStep }: AnimatedDealsProps) => {
           <div className="text-2xl font-bold text-[#4070FF]">{currentDeal.askingPrice}</div>
           <div className="mt-1 text-base text-[#111827] font-semibold">{currentDeal.title}</div>
           <div className="mt-1 text-sm text-[#4B5563]">{currentDeal.summary}</div>
-          <div className="mt-1 text-sm text-[#9CA3AF]">Rating: {currentDeal.rating}</div>
-          <Link href={currentDeal.link} className="text-[#4070FF] mt-2 text-sm hover:underline">View Deal</Link>
+         
+          <button 
+  onClick={() => window.open("https://www.linkedin.com/company/pocket-fund/posts/?feedView=all", "_blank")}
+  className="text-blue-500 mt-2 text-sm hover:underline cursor-pointer"
+>
+  View Deal
+</button>
         </motion.div>
       </AnimatePresence>
     </div>
