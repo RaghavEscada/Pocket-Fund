@@ -4,34 +4,36 @@ import Image from "next/image";
 import { TimelineDemo } from "@/data/data";
 import MacbookScrollDemo from "@/data/data";
 
+import { Cloud, Smartphone, Globe, Briefcase } from 'lucide-react';
+
 const investmentFocus = [
   {
     id: 1,
     title: "SaaS Tools",
     description:
       "$30K–$300K in MRR, these lean, highly profitable SaaS driven by small, efficient teams.",
-    image: "/saas.png",
+    icon: <Cloud className="w-12 h-12 text-blue-500" />
   },
   {
     id: 2,
     title: "Mobile Applications",
     description:
       "Consumer and business applications with established user audiences.",
-    image: "/ma.png",
+    icon: <Smartphone className="w-12 h-12 text-green-500" />
   },
   {
     id: 3,
     title: "Content Sites",
     description:
       "Established websites with quality traffic and monetization strategies.",
-    image: "/css.png",
+    icon: <Globe className="w-12 h-12 text-purple-500" />
   },
   {
     id: 4,
     title: "Niche Services",
     description:
       "Specialized digital services with loyal customer bases and growth potential.",
-    image: "/nc.png",
+    icon: <Briefcase className="w-12 h-12 text-orange-500" />
   },
 ];
 
@@ -142,35 +144,31 @@ export default function About() {
           We're looking for opportunities priced under $100K that tackle a clear pain point, face minimal competition, and offer strong potential
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {investmentFocus.map((item) => (
-            <div
-              key={item.id}
-              className="group bg-gray-900 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
-            >
-              <div className="flex flex-col items-center text-center">
-                <div className="mb-6 relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl transform -rotate-3 scale-95 group-hover:scale-105 transition-transform duration-300"></div>
-                  <div className="relative p-2">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      width={400}
-                      height={320}
-                      className="rounded-xl"
-                    />
-                  </div>
+        <div className="p-6 max-w-6xl mx-auto">
+      <h2 className="text-2xl font-bold mb-6 text-center text-white">Investment Focus</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {investmentFocus.map((item) => (
+          <div
+            key={item.id}
+            className="group bg-gray-900 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+          >
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-6 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl transform -rotate-3 scale-95 group-hover:scale-105 transition-transform duration-300"></div>
+                <div className="relative p-8 flex items-center justify-center">
+                  {item.icon}
                 </div>
-                <h4 className="text-blue-500 font-semibold text-xl mb-3">
-                  {item.title}
-                </h4>
-                <p className="text-gray-300">{item.description}</p>
               </div>
+              <h4 className="text-blue-500 font-semibold text-xl mb-3">
+                {item.title}
+              </h4>
+              <p className="text-gray-300">{item.description}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-
+    </div>
+</div>
       {/* Investment Criteria - Creative Honeycomb Design */}
       <div className="max-w-6xl mx-auto mb-32 px-4 py-16">
   <div className="relative mb-16">
