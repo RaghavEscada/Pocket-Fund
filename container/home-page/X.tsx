@@ -1,112 +1,135 @@
 "use client";
-
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import {
+  Briefcase, Search, DollarSign, TrendingUp, CheckCircle
+} from "lucide-react";
 
 const processSteps = [
   {
     id: 1,
     number: "01",
     title: "Deal Sourcing",
-    description: "We discover overlooked digital businesses through proprietary tech, networks, and niche platforms."
+    description: "We discover overlooked digital businesses through proprietary tech, networks, and niche platforms.",
+    icon: Search,
+    points: [
+      "AI bots scan 150+ platforms.",
+      "We leverage personal founder networks.",
+      "Inbound applications via our site.",
+    ],
   },
   {
     id: 2,
     number: "02",
     title: "Evaluation & Diligence",
-    description: "We assess business health, financials, and growth potential using AI-driven workflows and expert insight."
+    description: "We assess business health, financials, and growth potential using AI-driven workflows and expert insight.",
+    icon: Briefcase,
+    points: [
+      "Revenue quality & churn analysis.",
+      "Tech & product audit.",
+      "Founder interviews & data-room evaluation.",
+    ],
   },
   {
     id: 3,
     number: "03",
     title: "Acquisition",
-    description: "We negotiate and acquire high-potential SaaS, MarTech, and niche online businesses at fair, founder-friendly terms."
+    description: "We negotiate and acquire high-potential SaaS, MarTech, and niche online businesses at fair, founder-friendly terms.",
+    icon: DollarSign,
+    points: [
+      "Transparent deal terms.",
+      "Minimal disruption to sellers.",
+      "Flexible payout structures.",
+    ],
   },
   {
     id: 4,
     number: "04",
     title: "Operate & Scale",
-    description: "We step in post-acquisition to optimize pricing, improve retention, and unlock scale through strategic execution."
+    description: "We step in post-acquisition to optimize pricing, improve retention, and unlock scale through strategic execution.",
+    icon: TrendingUp,
+    points: [
+      "Automated onboarding & handover.",
+      "Dedicated ops & growth pods.",
+      "Focus on retention, CRO & strategic hires.",
+    ],
   },
 ];
 
 export default function HorizontalScrollProcess() {
   const targetRef = useRef(null);
-  
-  // This container controls the overall height of the scroll section
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
+  const { scrollYProgress } = useScroll({ target: targetRef });
 
-  // Transform the vertical scroll into horizontal movement for first 70% of scroll
-  const x = useTransform(
-    scrollYProgress,
-    [0, 0.7], 
-    ["0%", `-${(processSteps.length - 1) * 25}%`]
-  );
+  // Adjusted to make sure horizontal scrolling completes within the available space
+  const x = useTransform(scrollYProgress, [0, 0.7], ["0%", `-${(processSteps.length - 1) * 25}%`]);
   
-  // Then control the "unpinning" in the last 30% of the scroll
-  const y = useTransform(
-    scrollYProgress,
-    [0.8, 1], 
-    ["0vh", "-50vh"]
-  );
+  // Adjusted to make the final transition happen earlier
+  const y = useTransform(scrollYProgress, [0.7, 1], ["0vh", "-20vh"]);
   
-  // Control opacity for the carousel when unpinning
-  const carouselOpacity = useTransform(
-    scrollYProgress,
-    [0.78, 0.80],
-    [1, 0]
-  );
+  // Adjusted opacity transition to match the y transition
+  const carouselOpacity = useTransform(scrollYProgress, [0.7, 0.9], [1, 0]);
 
   return (
-    <section 
-      ref={targetRef} 
-      className="relative h-[1800vh]" // Reduced height for smoother scrolling
-    >
-      {/* Sticky container that holds the process steps */}
-      <motion.div 
-        style={{ y, opacity: carouselOpacity }} 
-        className="sticky top-0 h-screen w-full flex items-center overflow-hidden bg-gradient-to-br from-gray-900 to-black"
-      >
-        <div className="relative w-full h-full flex flex-col justify-center">
-          {/* Title that stays fixed while scrolling horizontally */}
-          <h2 className="text-4xl md:text-6xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 px-6">
-            Our Acquisition Process
-          </h2>
-          
-          {/* The actual horizontal scrolling container */}
-          <div className="relative h-[70vh] flex items-center overflow-hidden">
-            <motion.div 
-              style={{ x }} 
-              className="flex gap-8 px-10 absolute"
-            >
-              {processSteps.map((step) => (
-                <div
-                  key={step.id}
-                  className="relative w-screen h-[50vh] flex-shrink-0 flex flex-col justify-center px-8 md:px-24"
-                >
-                  <div className="max-w-4xl mx-auto">
-                    <div className="flex flex-col space-y-6">
-                      <div className="flex items-center space-x-4">
-                        <span className="text-6xl md:text-8xl font-black text-blue-500/20">{step.number}</span>
-                        <h3 className="text-3xl md:text-5xl font-bold text-white">{step.title}</h3>
-                      </div>
-                      <div className="h-1 w-32 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
-                      <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-                        {step.description}
-                      </p>
-                    </div>
+    <section ref={targetRef} className="relative h-[1500vh] bg-black">
+      <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-start text-white">
+        <motion.div
+          style={{ x, y, opacity: carouselOpacity }}
+          className="flex flex-nowrap h-screen pt-20 pb-0"
+        >
+          {processSteps.map((step) => {
+            const Icon = step.icon;
+            return (
+              <motion.div
+                key={step.id}
+                className="w-screen h-full px-7 flex items-center justify-center relative"
+              >
+                {/* Vertical bullet connector */}
+                <div className="absolute left-16 top-1/2 transform -translate-y-1/2 flex flex-col items-center">
+                  <div className="h-72 w-1 bg-gradient-to-b from-indigo-500 to-purple-500"></div>
+                  <div className="h-14 w-14 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full shadow-xl border-2 border-white/20 z-10 flex items-center justify-center">
+                    <span className="text-white font-bold text-xl">{step.number}</span>
                   </div>
                 </div>
-              ))}
-            </motion.div>
-          </div>
-          
-          {/* Progress indicator dots */}
-          
+
+                {/* Content card - Much bigger */}
+                <div className="max-w-6xl w-full h-4/5 bg-gradient-to-br from-white/15 via-white/10 to-transparent p-16 rounded-3xl shadow-2xl backdrop-blur-md border border-white/20 hover:border-indigo-300/30 transition-all duration-300 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-8 mb-10">
+                      <div className="h-24 w-24 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-2xl flex items-center justify-center shadow-lg">
+                        <Icon className="h-12 w-12" />
+                      </div>
+                      <h3 className="text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">{step.title}</h3>
+                    </div>
+                    
+                    <p className="text-gray-200 text-2xl mb-12 leading-relaxed max-w-4xl">{step.description}</p>
+                  </div>
+                  
+                  <div className="flex-grow flex items-center">
+                    <ul className="space-y-8 text-gray-200 w-full">
+                      {step.points.map((point, idx) => (
+                        <li key={idx} className="flex items-start gap-6">
+                          <div className="bg-indigo-500/20 p-3 rounded-xl">
+                            <CheckCircle className="h-10 w-10 text-indigo-400 flex-shrink-0" />
+                          </div>
+                          <span className="text-2xl pt-2">{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+
+        {/* Title - Enhanced */}
+        <div className="absolute top-8 w-full text-center">
+          <h1 className="text-4xl md:text-5xl font-semibold text-center mb-16 text-blue-500">
+            Our Process
+          </h1>
+      
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

@@ -174,103 +174,103 @@ export default function About() {
       </div>
 
       {/* Investment Criteria - Creative Honeycomb Design */}
-      <div className="max-w-6xl mx-auto mb-32 px-4">
-        <h3 className="text-4xl md:text-5xl font-semibold text-center mb-8 text-blue-500">
-          Basic Criteria
-        </h3>
-        <p className="text-center text-xl max-w-4xl mx-auto mb-16 text-gray-300">
-          Our sweet spot for acquisitions meets these five key criteria
-        </p>
+      <div className="max-w-6xl mx-auto mb-32 px-4 py-16">
+  <div className="relative mb-16">
+    <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-blue-500/10 rounded-full blur-lg"></div>
+    <h3 className="text-4xl md:text-6xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">
+      Basic Criteria
+    </h3>
+    <p className="text-center text-xl max-w-3xl mx-auto text-gray-300">
+      Our sweet spot for acquisitions meets these five key criteria
+    </p>
+  </div>
 
-        <div className="relative">
-          {/* Background effects */}
-          <div className="absolute inset-0 bg-blue-500/5 rounded-3xl filter blur-xl"></div>
-          
-          {/* Creative honeycomb layout */}
-          <div className="relative py-12">
-            {/* Central blue orb */}
-            <div className="hidden lg:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-blue-500/20 rounded-full shadow-lg shadow-blue-500/10 z-0"></div>
+  {/* Creative hexagonal-inspired layout */}
+  <div className="relative">
+    {/* Decorative background elements */}
+    <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+    <div className="absolute -z-10 top-1/4 right-1/4 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl"></div>
+    <div className="absolute -z-10 bottom-1/4 left-1/4 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl"></div>
+    
+    {/* Top row - 3 items */}
+    <div className="flex flex-col lg:flex-row justify-center gap-8 mb-16">
+      {investmentCriteria.slice(0, 3).map((criterion, index) => (
+        <div 
+          key={index}
+          className="group relative w-full lg:w-1/3"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-800/80 to-gray-900/90 rounded-2xl rotate-1 scale-[0.98]"></div>
+          <div className="relative bg-gray-900/90 backdrop-blur-md p-6 rounded-2xl border border-gray-800 shadow-xl">
+            <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${criterion.color} rounded-t-xl`}></div>
+            <div className={`absolute -left-3 top-6 w-6 h-6 rounded-full bg-gradient-to-br ${criterion.color.replace("from-", "").replace("to-", "")} opacity-70`}></div>
             
-            {/* Criteria display in creative layout */}
-            <div className="flex flex-col items-center">
-              {/* Top row - 2 items */}
-              <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-12 mb-8 w-full">
-                {investmentCriteria.slice(0, 2).map((criterion, index) => (
-                  <div 
-                    key={index}
-                    className="group relative w-full max-w-sm bg-gray-900/80 backdrop-blur-sm p-1 rounded-2xl overflow-hidden transform transition-all duration-500 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1"
-                  >
-                    <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${criterion.color}`}></div>
-                    <div className="relative p-6">
-                      <div className="flex items-center">
-                        <span className="text-5xl mr-4">{criterion.icon}</span>
-                        <div>
-                          <h4 className="text-blue-400 font-bold text-lg">{criterion.title}</h4>
-                          <p className="text-gray-300 mt-1">{criterion.description}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+            <div className="flex flex-col space-y-4">
+              <div className={`w-12 h-12 rounded-lg flex items-center justify-center text-2xl bg-gradient-to-br ${criterion.color} bg-opacity-20`}>
+                {criterion.icon}
               </div>
-              
-              {/* Middle row - 1 central item */}
-              <div className="flex justify-center mb-8">
-                <div 
-                  className="group relative w-full max-w-sm bg-gray-900/90 backdrop-blur-sm p-1 rounded-2xl overflow-hidden transform transition-all duration-500 hover:shadow-lg hover:shadow-blue-500/20 hover:-translate-y-1 z-10"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10"></div>
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 to-blue-600"></div>
-                  <div className="relative p-6">
-                    <div className="flex items-center">
-                      <span className="text-5xl mr-4">{investmentCriteria[2].icon}</span>
-                      <div>
-                        <h4 className="text-blue-400 font-bold text-lg">{investmentCriteria[2].title}</h4>
-                        <p className="text-gray-300 mt-1">{investmentCriteria[2].description}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Bottom row - 2 items */}
-              <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-12 w-full">
-                {investmentCriteria.slice(3, 5).map((criterion, index) => (
-                  <div 
-                    key={index}
-                    className="group relative w-full max-w-sm bg-gray-900/80 backdrop-blur-sm p-1 rounded-2xl overflow-hidden transform transition-all duration-500 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1"
-                  >
-                    <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${criterion.color}`}></div>
-                    <div className="relative p-6">
-                      <div className="flex items-center">
-                        <span className="text-5xl mr-4">{criterion.icon}</span>
-                        <div>
-                          <h4 className="text-blue-400 font-bold text-lg">{criterion.title}</h4>
-                          <p className="text-gray-300 mt-1">{criterion.description}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+              <div>
+                <h4 className="text-blue-400 font-bold text-xl mb-2">{criterion.title}</h4>
+                <p className="text-gray-300">{criterion.description}</p>
               </div>
             </div>
-            
-            {/* Connecting lines */}
-            <svg className="hidden lg:block absolute inset-0 w-full h-full z-0" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#60a5fa" stopOpacity="0.4" />
-                  <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.4" />
-                </linearGradient>
-              </defs>
-              <line x1="35%" y1="30%" x2="50%" y2="50%" stroke="url(#lineGradient)" strokeWidth="1" />
-              <line x1="65%" y1="30%" x2="50%" y2="50%" stroke="url(#lineGradient)" strokeWidth="1" />
-              <line x1="35%" y1="70%" x2="50%" y2="50%" stroke="url(#lineGradient)" strokeWidth="1" />
-              <line x1="65%" y1="70%" x2="50%" y2="50%" stroke="url(#lineGradient)" strokeWidth="1" />
-            </svg>
           </div>
         </div>
-      </div>
+      ))}
+    </div>
+    
+    {/* Bottom row - 2 items */}
+    <div className="flex flex-col lg:flex-row justify-center gap-12 lg:px-20">
+      {investmentCriteria.slice(3, 5).map((criterion, index) => (
+        <div 
+          key={index}
+          className="group relative w-full lg:w-1/2"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-800/80 to-gray-900/90 rounded-2xl -rotate-1 scale-[0.98]"></div>
+          <div className="relative bg-gray-900/90 backdrop-blur-md p-6 rounded-2xl border border-gray-800 shadow-xl">
+            <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${criterion.color} rounded-t-xl`}></div>
+            <div className={`absolute -right-3 top-6 w-6 h-6 rounded-full bg-gradient-to-br ${criterion.color.replace("from-", "").replace("to-", "")} opacity-70`}></div>
+            
+            <div className="flex flex-col space-y-4">
+              <div className={`w-12 h-12 rounded-lg flex items-center justify-center text-2xl bg-gradient-to-br ${criterion.color} bg-opacity-20`}>
+                {criterion.icon}
+              </div>
+              <div>
+                <h4 className="text-blue-400 font-bold text-xl mb-2">{criterion.title}</h4>
+                <p className="text-gray-300">{criterion.description}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    {/* Connecting elements */}
+    <div className="hidden lg:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-blue-500/10 rounded-full blur-md"></div>
+    
+    {/* Decorative lines with circles */}
+    <svg className="hidden lg:block absolute inset-0 w-full h-full -z-5" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#60a5fa" stopOpacity="0.3" />
+          <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.3" />
+        </linearGradient>
+      </defs>
+      {/* Lines connecting from top row to bottom row */}
+      <path d="M25%,45% L50%,50% L35%,60%" stroke="url(#lineGradient)" strokeWidth="1" fill="none"/>
+      <path d="M50%,45% L50%,50% L35%,60%" stroke="url(#lineGradient)" strokeWidth="1" fill="none"/>
+      <path d="M75%,45% L50%,50% L65%,60%" stroke="url(#lineGradient)" strokeWidth="1" fill="none"/>
+      <path d="M50%,45% L50%,50% L65%,60%" stroke="url(#lineGradient)" strokeWidth="1" fill="none"/>
+      
+      {/* Decorative dots at connection points */}
+      <circle cx="25%" cy="45%" r="3" fill="#60a5fa" fillOpacity="0.4" />
+      <circle cx="50%" cy="45%" r="3" fill="#60a5fa" fillOpacity="0.4" />
+      <circle cx="75%" cy="45%" r="3" fill="#60a5fa" fillOpacity="0.4" />
+      <circle cx="35%" cy="60%" r="3" fill="#8b5cf6" fillOpacity="0.4" />
+      <circle cx="65%" cy="60%" r="3" fill="#8b5cf6" fillOpacity="0.4" />
+      <circle cx="50%" cy="50%" r="5" fill="#60a5fa" fillOpacity="0.4" />
+    </svg>
+  </div>
+</div>
 
       {/* Timeline Preview - Creative Dashboard Design */}
       <div className="max-w-6xl mx-auto mb-32 px-4">

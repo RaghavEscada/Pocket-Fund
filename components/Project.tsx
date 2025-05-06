@@ -1,71 +1,94 @@
 "use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
-import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
-export default function Project({ item }: { item: any }) {
-  const [hovered, setHovered] = useState(false);
-  
+export default function ProjectGrid({ projects }: { projects?: any[] }) {
+  // If no projects are provided, use sample data
+  const projectsToShow = projects || [
+    {
+      id: 1,
+      title: "Brand Identity",
+      src: "/api/placeholder/600/400",
+      links: [
+        { id: 1, title: "View Case Study", href: "/case-study/1" },
+        { id: 2, title: "Visit Website", href: "#" },
+      ],
+    },
+    {
+      id: 2,
+      title: "E-Commerce",
+      src: "/api/placeholder/600/400",
+      links: [
+        { id: 1, title: "View Case Study", href: "/case-study/2" },
+        { id: 2, title: "Visit Website", href: "#" },
+      ],
+    },
+    {
+      id: 3,
+      title: "Mobile App",
+      src: "/api/placeholder/600/400",
+      links: [
+        { id: 1, title: "View Case Study", href: "/case-study/3" },
+      ],
+    },
+    {
+      id: 4,
+      title: "Branding",
+      src: "/api/placeholder/600/400",
+      links: [
+        { id: 1, title: "View Case Study", href: "/case-study/4" },
+        { id: 2, title: "Visit Website", href: "#" },
+      ],
+    },
+  ];
+
   return (
-    <section className="w-full bg-neutral-900 rounded-t-lg py-12">
+    <section className="w-full bg-neutral-900 py-12">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Project Card */}
-        <div className="mb-16">
-          {/* Project Title */}
-          <div className="flex items-center gap-2 mb-4">
-            <span className="w-2 h-2 rounded-full bg-white" />
-            <h2 className="text-lg font-medium uppercase text-white">
-              {item.title}
-            </h2>
-          </div>
-          
-          {/* Project Image */}
-          <div 
-            className="relative overflow-hidden rounded-lg cursor-pointer group"
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-          >
-            <Image
-              src={item.src}
-              alt={`${item.title} project`}
-              className="w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-            />
-            
-            {/* Animated Title Overlay */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-hidden z-10 opacity-0 group-hover:opacity-80 transition-opacity duration-500">
-              {item.title.split("").map((letter: string, i: number) => (
-                <motion.span
-                  key={i}
-                  initial={{ y: "100%" }}
-                  animate={hovered ? { y: 0 } : { y: "100%" }}
-                  transition={{
-                    delay: i * 0.04,
-                    duration: 0.5,
-                    ease: [0.4, 0, 0.2, 1],
-                  }}
-                  className="text-7xl md:text-8xl font-bold inline-block uppercase text-white/90"
-                >
-                  {letter}
-                </motion.span>
-              ))}
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {projectsToShow.map((project) => (
+            <div 
+              key={project.id} 
+              className="bg-neutral-800 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              {/* Project Image */}
+              <div className="relative aspect-video overflow-hidden">
+                <Image
+                  src={project.src}
+                  alt={`${project.title} project`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  width={600}
+                  height={400}
+                />
+                <div className="absolute inset-0 bg-black/30 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <h2 className="text-2xl font-bold text-white">{project.title}</h2>
+                </div>
+              </div>
+              
+              {/* Project Info */}
+              <div className="p-4">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="w-2 h-2 rounded-full bg-white" />
+                  <h3 className="text-lg font-medium text-white">{project.title}</h3>
+                </div>
+                
+                {/* Project Links */}
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {project.links.map((link:any) => (
+                    <Link
+                      key={link.id}
+                      href={link.href}
+                      className="px-3 py-1 text-sm bg-transparent border border-white/40 rounded-full text-white hover:bg-white hover:text-black transition-colors duration-300"
+                    >
+                      {link.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
-          
-          {/* Project Links */}
-          <div className="flex flex-wrap gap-3 mt-4">
-            {item.links.map((link: any) => (
-              <Link
-                key={link.id}
-                href={link.href}
-                className="px-5 py-2 bg-transparent border border-white/40 rounded-full text-white hover:bg-white hover:text-black transition-colors duration-300"
-              >
-                {link.title}
-              </Link>
-            ))}
-          </div>
+          ))}
         </div>
         
         {/* View All Button */}

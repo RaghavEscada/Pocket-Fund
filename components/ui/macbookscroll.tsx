@@ -24,6 +24,7 @@ import { IconWorld } from "@tabler/icons-react"
 import { IconCommand } from "@tabler/icons-react"
 import { IconCaretLeftFilled } from "@tabler/icons-react"
 import { IconCaretDownFilled } from "@tabler/icons-react"
+import Image from "next/image"
 
 export const MacbookScroll = ({
   src,
@@ -148,9 +149,11 @@ export const Lid = ({
         className="absolute inset-0 min-h-[22rem] w-[32rem] rounded-2xl bg-[#010101] p-2"
       >
         <div className="absolute inset-0 rounded-lg bg-transparent" />
-        <img
+        <Image
           src="/buis.png"
           alt="pocket fund content"
+          height={200}
+          width={200}
           className="absolute inset-0 h-full w-full rounded-lg object-cover object-left-top"
         />
       </motion.div>

@@ -4,8 +4,7 @@ import {
   useScroll,
   useTransform,
   motion,
-  AnimatePresence,
-  MotionValue
+  
 } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
