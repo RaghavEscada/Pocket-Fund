@@ -1,10 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { TimelineDemo } from "@/data/data";
-import { CompareDemo } from "@/components/compare-drag-demo";
 import MacbookScrollDemo from "@/data/data";
 
 const investmentFocus = [
@@ -41,32 +38,33 @@ const investmentFocus = [
 const investmentCriteria = [
   {
     icon: "💰",
-    title: "Price",
-    description: "Under $5,000",
+    title: "Price & Team ",
+    description: "$30k–$300k MRR, highly profitable. Small teams adapt, maintaining output."
+,
     color: "from-green-400 to-emerald-600"
   },
   {
     icon: "🎯",
     title: "Niche Value",
-    description: "Specific market value",
+    description: "Delivers high ROI by targeting underserved, specific markets. Lean teams build focused, profitable solutions with consistent output.",
     color: "from-blue-400 to-indigo-600"
   },
   {
     icon: "🥇",
     title: "Competition",
-    description: "Low competitive landscape",
+    description: "Operates in a low-competition niche with high entry barriers. Easier customer acquisition and stronger market hold.",
     color: "from-purple-400 to-violet-600"
   },
   {
     icon: "📈",
     title: "Growth",
-    description: "Automation & content potential",
+    description: "Scalable through automation, SEO, and content loops. Compounds reach with minimal ongoing effort.",
     color: "from-orange-400 to-pink-600"
   },
   {
     icon: "⚙️",
     title: "Operations",
-    description: "Simple operating structure",
+    description: "Lean, streamlined processes with minimal overhead. Easy to manage and replicate across verticals.",
     color: "from-red-400 to-rose-600"
   }
 ];

@@ -205,7 +205,7 @@ export const Compare = ({
             >
               <Image
                 alt="first image"
-                src={firstImage}
+                src="/st.png"
                 className={cn(
                   "absolute inset-0 z-20 rounded-2xl shrink-0 w-full h-full select-none",
                   firstImageClassName
@@ -228,7 +228,7 @@ export const Compare = ({
             <Image
               className="object-cover"
               alt="second image"
-              src={secondImage}
+              src="/ST2.png"
               draggable={false}
               fill
               sizes="(max-width: 768px) 100vw, 400px"

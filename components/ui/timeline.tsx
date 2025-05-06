@@ -134,12 +134,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 relative z-10"
       >
-        <h2 className="text-4xl md:text-6xl lg:text-7xl mb-6 text-white font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
-          Changelog from my journey
+        <h2 className="text-2xl md:text-6xl lg:text-7xl mb-6 text-white font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+        Acquisition at Pocket Fund
         </h2>
         <p className="text-gray-300 text-lg md:text-xl max-w-2xl leading-relaxed">
-          I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
-          a timeline of my journey through the digital landscape.
+        Step-by-step process of acquiring, managing, and growing funds in a pocket fund.
         </p>
       </motion.div>
 

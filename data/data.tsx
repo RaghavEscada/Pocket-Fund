@@ -61,141 +61,278 @@ export function TimelineDemo() {
     {
       title: "Deal Sourcing",
       content: (
-        <div className="flex items-center space-x-8">
+        <div className="flex items-center space-x-8 bg-gray-900 p-6 rounded-xl">
           <div className="flex-1">
-            <p className="mb-8 text-lg font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-              📊 **Deal Sourcing: The Heart of Business Growth** 🚀
-              <br />
-              <br />
-              Deal sourcing is the art and science of finding high-potential investment opportunities, acquisitions, and partnerships that drive growth and innovation. Whether you're an investor, a venture capitalist, or a business development professional, effective deal sourcing is the key to success in a competitive market. 🌟
-              <br />
-              <br />
-              **Why is Deal Sourcing Important?** 🤔
-              <ul>
-                <li>Maximizing Returns 💸: Identifying high-quality opportunities that provide maximum returns.</li>
-                <li>Building Strong Networks 🌐: Expanding your network to tap into new opportunities.</li>
-                <li>Diversification of Portfolio 🏦: Ensuring a resilient portfolio by sourcing across multiple sectors.</li>
-              </ul>
-              <br />
-              **Key Steps in Deal Sourcing** 🔍:
-              <ul>
-                <li>Market Research 🔬: Stay updated on emerging trends and disruptors.</li>
-                <li>Networking & Relationship Building 🗣️: Build strong relationships with entrepreneurs and investors.</li>
-                <li>Screening Opportunities ✅: Rigorous screening ensures only the right deals make it to your portfolio.</li>
-                <li>Negotiation 💬: Solid negotiation skills ensure win-win deals for both parties.</li>
-              </ul>
+            <h2 className="mb-4 text-2xl font-bold text-blue-500">
+              📊 Deal Sourcing: The Heart of Business Growth 🚀
+            </h2>
+            
+            <p className="mb-5 text-base text-white">
+              The art of finding high-potential investment opportunities, acquisitions, and partnerships that drive growth.
             </p>
+            
+            <div className="mb-5 border-l-4 border-blue-500 pl-4">
+              <h3 className="mb-3 text-xl font-medium text-blue-400">
+                Why is Deal Sourcing Important? 🤔
+              </h3>
+              <ul className="space-y-2">
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">💸</span>
+                  <span><strong className="text-blue-300">Maximizing Returns:</strong> Identifying high-quality opportunities</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">🌐</span>
+                  <span><strong className="text-blue-300">Building Networks:</strong> Expanding connections for new opportunities</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">🏦</span>
+                  <span><strong className="text-blue-300">Portfolio Diversification:</strong> Sourcing across multiple sectors</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="border-l-4 border-blue-500 pl-4">
+              <h3 className="mb-3 text-xl font-medium text-blue-400">
+                Key Steps 🔍
+              </h3>
+              <ul className="space-y-2">
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">🔬</span>
+                  <span><strong className="text-blue-300">Market Research:</strong> Stay updated on trends</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">🗣️</span>
+                  <span><strong className="text-blue-300">Networking:</strong> Build relationships with key players</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">✅</span>
+                  <span><strong className="text-blue-300">Screening:</strong> Identify the right opportunities</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">💬</span>
+                  <span><strong className="text-blue-300">Negotiation:</strong> Ensure win-win deals</span>
+                </li>
+              </ul>
+            </div>
           </div>
+          
           <div>
             <img
               src="hand.gif"
               alt="startup template"
               width={500}
               height={500}
-              className="w-[500px] h-[500px] rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              className="w-64 h-64 rounded-lg object-cover shadow-blue-500/50 shadow-lg"
             />
           </div>
         </div>
       ),
-    }
-,    
+    },    
     {
-      title: "Early 2023",
+      title: "Investment Analysis",
       content: (
-        <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            I usually run out of copy, but when I see content this big, I try to
-            integrate lorem ipsum.
-          </p>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
+        <div className="flex items-center space-x-8 bg-gray-900 p-6 rounded-xl">
+          <div className="flex-1">
+            <h2 className="mb-4 text-2xl font-bold text-blue-500">
+              🔍 Investment Analysis: From Discovery to Decision 🎯
+            </h2>
+            
+            <p className="mb-5 text-base text-white">
+              The systematic process of evaluating potential opportunities to determine their strategic fit and financial viability.
+            </p>
+            
+            <div className="mb-5 border-l-4 border-blue-500 pl-4">
+              <h3 className="mb-3 text-xl font-medium text-blue-400">
+                Why is Investment Analysis Critical? 💡
+              </h3>
+              <ul className="space-y-2">
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">📈</span>
+                  <span><strong className="text-blue-300">Value Assessment:</strong> Identifying true growth potential beyond surface numbers</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">🧩</span>
+                  <span><strong className="text-blue-300">Strategic Alignment:</strong> Ensuring opportunities match long-term objectives</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">⚖️</span>
+                  <span><strong className="text-blue-300">Risk Management:</strong> Uncovering potential challenges before commitment</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="border-l-4 border-blue-500 pl-4">
+              <h3 className="mb-3 text-xl font-medium text-blue-400">
+                Essential Components 🔍
+              </h3>
+              <ul className="space-y-2">
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">📊</span>
+                  <span><strong className="text-blue-300">Financial Examination:</strong> Scrutinize performance metrics and projections</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">🏭</span>
+                  <span><strong className="text-blue-300">Operational Review:</strong> Evaluate business processes and efficiencies</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">👥</span>
+                  <span><strong className="text-blue-300">Leadership Assessment:</strong> Analyze management team capabilities</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">📜</span>
+                  <span><strong className="text-blue-300">Legal Verification:</strong> Confirm compliance and identify liabilities</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div>
             <img
-              src="https://assets.aceternity.com/pro/hero-sections.png"
-              alt="hero template"
+              src="st.gif"
+              alt="investment analysis"
               width={500}
               height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/features-section.png"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/pro/bento-grids.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/cards.png"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+              className="w-64 h-64 rounded-lg object-cover shadow-blue-500/50 shadow-lg"
             />
           </div>
         </div>
       ),
     },
     {
-      title: "Changelog",
+      title: "Integration Blueprint",
       content: (
-        <div>
-          <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Deployed 5 new components on Aceternity today
-          </p>
-          <div className="mb-8">
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Card grid component
+        <div className="flex items-center space-x-8 bg-gray-900 p-6 rounded-xl">
+          <div className="flex-1">
+            <h2 className="mb-4 text-2xl font-bold text-blue-500">
+              🤝 Integration Blueprint: Transition to Ownership 📝
+            </h2>
+            
+            <p className="mb-5 text-base text-white">
+              The comprehensive roadmap for seamlessly incorporating new acquisitions into existing business infrastructure.
+            </p>
+            
+            <div className="mb-5 border-l-4 border-blue-500 pl-4">
+              <h3 className="mb-3 text-xl font-medium text-blue-400">
+                Why is Integration Planning Vital? 🌟
+              </h3>
+              <ul className="space-y-2">
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">🔄</span>
+                  <span><strong className="text-blue-300">Continuity Assurance:</strong> Minimizing disruption during ownership transfer</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">🤝</span>
+                  <span><strong className="text-blue-300">Cultural Cohesion:</strong> Blending organizational values and practices</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">💰</span>
+                  <span><strong className="text-blue-300">Synergy Capture:</strong> Realizing projected cost savings and revenue growth</span>
+                </li>
+              </ul>
             </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Startup template Aceternity
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Random file upload lol
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Himesh Reshammiya Music CD
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Salman Bhai Fan Club registrations open
+            
+            <div className="border-l-4 border-blue-500 pl-4">
+              <h3 className="mb-3 text-xl font-medium text-blue-400">
+                Critical Phases ⏱️
+              </h3>
+              <ul className="space-y-2">
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">📝</span>
+                  <span><strong className="text-blue-300">Documentation:</strong> Securing intellectual property and contractual agreements</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">👋</span>
+                  <span><strong className="text-blue-300">Stakeholder Communication:</strong> Managing expectations of all parties</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">🧩</span>
+                  <span><strong className="text-blue-300">System Consolidation:</strong> Unifying technology and operational frameworks</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">👥</span>
+                  <span><strong className="text-blue-300">Team Alignment:</strong> Restructuring for optimal performance</span>
+                </li>
+              </ul>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          
+          <div>
             <img
-              src="https://assets.aceternity.com/pro/hero-sections.png"
-              alt="hero template"
+              src="bp.gif"
+              alt="integration blueprint"
               width={500}
               height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+              className="w-64 h-64 rounded-lg object-cover shadow-blue-500/50 shadow-lg"
             />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Growth Acceleration",
+      content: (
+        <div className="flex items-center space-x-8 bg-gray-900 p-6 rounded-xl">
+          <div className="flex-1">
+            <h2 className="mb-4 text-2xl font-bold text-blue-500">
+              🚀 Growth Acceleration: Transformation & Expansion 📈
+            </h2>
+            
+            <p className="mb-5 text-base text-white">
+              The strategic amplification of asset value through optimization, innovation, and market penetration.
+            </p>
+            
+            <div className="mb-5 border-l-4 border-blue-500 pl-4">
+              <h3 className="mb-3 text-xl font-medium text-blue-400">
+                Why is Growth Acceleration Essential? 🚀
+              </h3>
+              <ul className="space-y-2">
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">📊</span>
+                  <span><strong className="text-blue-300">Return Maximization:</strong> Delivering superior investor outcomes</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">🌐</span>
+                  <span><strong className="text-blue-300">Market Leadership:</strong> Establishing competitive advantages</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">🔄</span>
+                  <span><strong className="text-blue-300">Value Creation Cycle:</strong> Generating resources for future investments</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="border-l-4 border-blue-500 pl-4">
+              <h3 className="mb-3 text-xl font-medium text-blue-400">
+                Strategic Levers 🔧
+              </h3>
+              <ul className="space-y-2">
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">💡</span>
+                  <span><strong className="text-blue-300">Innovation Catalyst:</strong> Introducing new products or services</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">🌍</span>
+                  <span><strong className="text-blue-300">Market Development:</strong> Expanding into untapped territories</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">⚙️</span>
+                  <span><strong className="text-blue-300">Efficiency Engineering:</strong> Streamlining operations for profitability</span>
+                </li>
+                <li className="flex items-center text-base text-white">
+                  <span className="mr-3 text-blue-500">🧠</span>
+                  <span><strong className="text-blue-300">Talent Optimization:</strong> Cultivating high-performance teams</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div>
             <img
-              src="https://assets.aceternity.com/features-section.png"
-              alt="feature template"
+              src="mm.gif"
+              alt="growth acceleration"
               width={500}
               height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/pro/bento-grids.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/cards.png"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+              className="w-64 h-64 rounded-lg object-cover shadow-blue-500/50 shadow-lg"
             />
           </div>
         </div>

@@ -64,13 +64,13 @@ export default function HorizontalScrollProcess() {
   const x = useTransform(scrollYProgress, [0, 0.7], ["0%", `-${(processSteps.length - 1) * 25}%`]);
   
   // Adjusted to make the final transition happen earlier
-  const y = useTransform(scrollYProgress, [0.7, 1], ["0vh", "-20vh"]);
+  const y = useTransform(scrollYProgress, [0.7, 1], ["0vh", "0vh"]);
   
   // Adjusted opacity transition to match the y transition
   const carouselOpacity = useTransform(scrollYProgress, [0.7, 0.9], [1, 0]);
 
   return (
-    <section ref={targetRef} className="relative h-[1500vh] bg-black">
+    <section ref={targetRef} className="relative h-[1450vh] bg-black">
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-start text-white">
         <motion.div
           style={{ x, y, opacity: carouselOpacity }}
@@ -122,11 +122,25 @@ export default function HorizontalScrollProcess() {
           })}
         </motion.div>
 
+        <motion.div
+  style={{ opacity: useTransform(scrollYProgress, [0.95, 1], [0, 1]) }}
+  className="absolute inset-0 flex items-center justify-center text-white pointer-events-none"
+>
+  <div className="text-center animate-bounce space-y-3">
+    <div className="text-2xl md:text-3xl font-semibold text-blue-400">This is Ours. Let’s Dive In</div>
+    <svg className="w-8 h-8 mx-auto text-blue-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+</motion.div>
+
         {/* Title - Enhanced */}
         <div className="absolute top-8 w-full text-center">
           <h1 className="text-4xl md:text-5xl font-semibold text-center mb-16 text-blue-500">
             Our Process
           </h1>
+
+          
       
         </div>
       </div>
