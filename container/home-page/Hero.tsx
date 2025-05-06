@@ -26,27 +26,63 @@ export default function Hero() {
   // Animation data for funding rounds
   const fundingRounds: FundingRound[] = [
     {
-      title: "Round A - Food Delivery SaaS",
-      summary: "AI powered B2B SaaS to optimize delivery costs across platforms.",
-      askingPrice: "₹15L for 10%",
-      rating: "8.4/10",
-      link: "https://example.com/round-a",
+      title: "Round A - SaaS Startup for B2B Mockup Creation (UAE)",
+      summary: "Online platform enabling B2B marketers to create visuals for Print on Demand & Digital Out of Home ads. Built with Node.js, MongoDB, AWS. Revenue: $45k/mo. Profit: $0.",
+      askingPrice: "$2M",
+      rating: "8/10",
+      link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
     {
-      title: "Round B - Health Tracker App",
-      summary: "Wearable-integrated app tracking 50+ health vitals using ML.",
-      askingPrice: "₹25L for 12%",
-      rating: "9.1/10",
-      link: "https://example.com/round-b",
+      title: "Round B - AI-Driven Email Outreach SaaS",
+      summary: "AI-powered cold email tool built on Laravel, AngularJS, Node.js. Automates outreach with inbox rotation, personalization. Revenue: $1k/mo, Profit: $900.",
+      askingPrice: "$70k",
+      rating: "9/10",
+      link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
     {
-      title: "Round C - Campus Town",
-      summary: "Student life & academic platform integrating clubs, LMS & more.",
-      askingPrice: "₹30L for 15%",
-      rating: "9.6/10",
-      link: "https://example.com/round-c",
+      title: "Round C - SaaS Startup for AI Interior Design",
+      summary: "Transform room photos into designs using AI. Built with Vercel, MySQL, NextJS. 7,800+ users. Revenue & profit: $1k/mo. No marketing spend.",
+      askingPrice: "$73k",
+      rating: "9/10",
+      link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
+    },
+    {
+      title: "Round D - SaaS Startup for B2B Mockup Creation (Estonia)",
+      summary: "Estonian mockup API platform. Node.js, MongoDB, AWS. $45k revenue last month but $0 profit. Competes with Placeit and Smartmockups.",
+      askingPrice: "$2M",
+      rating: "8/10",
+      link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
+    },
+    {
+      title: "Round E - AI Resume Builder SaaS",
+      summary: "Smart resume builder powered by AI for job seekers and recruiters. Generates ATS-friendly resumes in seconds. 12k users, 85% returning rate.",
+      askingPrice: "$50k",
+      rating: "8.7/10",
+      link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
+    },
+    {
+      title: "Round F - No-Code Website Builder for Creators",
+      summary: "Drag-and-drop website builder tailored for influencers and creators. Built on React & Firebase. $3k/mo revenue with strong organic traffic.",
+      askingPrice: "$120k",
+      rating: "8.9/10",
+      link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
+    },
+    {
+      title: "Round G - Mental Health Companion App (AI-based)",
+      summary: "AI chatbot for real-time emotional support. Used by 40+ institutions. Built with Flutter & GPT API. $5k MRR. Viral potential.",
+      askingPrice: "$150k",
+      rating: "9.2/10",
+      link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
+    },
+    {
+      title: "Round H - AI-Powered Legal Assistant SaaS",
+      summary: "SaaS platform for drafting and reviewing contracts using LLMs. Targeted at legal firms and startups. $10k MRR with 20 paying clients.",
+      askingPrice: "$200k",
+      rating: "9.3/10",
+      link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
   ];
+  
 
   useEffect(() => {
     // Check if device is mobile
