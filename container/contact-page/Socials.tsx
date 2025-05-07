@@ -8,7 +8,7 @@ import { useScroll, useTransform, motion } from "framer-motion";
 
 export default function Socials() {
 	const [rotate, setRotate] = useState(0);
-	const phrase = ["SMMA", "Web Development", "Brand Identity", "Content Strategy"];
+	const phrase = ["SaaS", "Mobile Apps", "Content Sites", "NIche services"];
 	useEffect(() => {
 		window.addEventListener("mousemove", (e) => {
 			let mouseX = e.clientX;
@@ -31,7 +31,7 @@ export default function Socials() {
 	const mq = useTransform(scrollYProgress, [0, 1], [0, -700]);
 	return (
 		<section
-			className="w-full min-h-screen sm:h-screen  bg-black text-red-400  xm:h-screen text-white padding-y relative"
+			className="w-full min-h-screen sm:h-screen  bg-black  xm:h-screen text-white padding-y relative"
 			ref={container}>
 			<div className="w-full h-full flex justify-center gap-[50px] items-center flex-col">
 				<div className="flex  flex-col gap-[10px] pb-[50px]">
@@ -52,7 +52,7 @@ export default function Socials() {
 									Studio:
 								</h1>
 								<div className="flex flex-col gap-y-[10px]">
-									<p>Based out of Kottayam, Kerala</p>
+									<p>Based out of Mumbai</p>
 								</div>
 							</div>
 							<div className="flex w-fit h-fit gap-x-[5px] group">
@@ -60,13 +60,13 @@ export default function Socials() {
 								<h1 className="paragraph  font-NeueMontreal text-white font-bold">
 							Contact Number : 
   <a 
-    href="https://wa.me/919789985132?text=Dear%20Revlient%20Marketing%20Team%2C%20I%20hope%20you%20are%20doing%20well.%20I%20am%20interested%20in%20learning%20more%20about%20your%20services%20and%20ongoing%20projects.%20Could%20you%20please%20provide%20more%20details%20or%20let%20me%20know%20a%20suitable%20time%20to%20discuss%20further%3F%20Looking%20forward%20to%20your%20response.%20Best%20regards%2C%20Client" 
+    href="https://wa.me/+919820059357?text=Dear%20Pocket%20Fund%20Team%2C%20I%20am%20interested%20in%20exploring%20potential%20investment%20opportunities%20for%20my%20startup.%20We're%20currently%20in%20our%20seed%20round%20and%20looking%20for%20strategic%20partners.%20Could%20we%20schedule%20a%20call%20to%20discuss%20your%20investment%20thesis%2C%20typical%20check%20size%2C%20and%20how%20my%20venture%20might%20align%20with%20your%20portfolio%3F%20I'd%20be%20happy%20to%20share%20our%20pitch%20deck%20in%20advance.%20Looking%20forward%20to%20connecting.%20Best%20regards." 
     target="_blank" 
     rel="noopener noreferrer"
     className="text-green-600 font-bold underline"
   >
      
-	 +91 6238714197 | +91 8590709204
+	 +91 98200 59357
   </a>
 </h1>
 								</div>

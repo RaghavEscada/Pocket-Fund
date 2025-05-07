@@ -7,9 +7,7 @@ import Link from 'next/link';
 // Types for funding rounds
 interface FundingRound {
   title: string;
-  summary: string;
   askingPrice: string;
- 
   link: string;
 }
 
@@ -27,49 +25,41 @@ export default function Hero() {
   const fundingRounds: FundingRound[] = [
     {
       title: "Round A - SaaS Startup for B2B Mockup Creation (UAE)",
-      summary: "B2B online mockup creation platform",
       askingPrice: "$2M",
       link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
     {
       title: "Round B - AI-Driven Email Outreach SaaS",
-      summary: "AI cold email automation tool",
       askingPrice: "$70k",
       link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
     {
       title: "Round C - SaaS Startup for AI Interior Design",
-      summary: "AI transforms photos into designs",
       askingPrice: "$73k",
       link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
     {
       title: "Round D - SaaS Startup for B2B Mockup Creation (Estonia)",
-      summary: "Estonian B2B mockup API platform",
       askingPrice: "$2M",
       link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
     {
       title: "Round E - AI Resume Builder SaaS",
-      summary: "AI-powered ATS-friendly resume builder",
       askingPrice: "$50k",
       link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
     {
       title: "Round F - No-Code Website Builder for Creators",
-      summary: "Website builder for content creators",
       askingPrice: "$120k",
       link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
     {
       title: "Round G - Mental Health Companion App (AI-based)",
-      summary: "AI chatbot for emotional support",
       askingPrice: "$150k",
       link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
     {
       title: "Round H - AI-Powered Legal Assistant SaaS",
-      summary: "AI contract drafting legal platform",
       askingPrice: "$200k",
       link: "https://www.linkedin.com/company/pocket-fund/posts/?feedView=all",
     },
@@ -116,7 +106,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#eae6da] to-transparent" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#eae6da] to-transparent" />
 
-      {/* Globe with responsive positioning - desktop vs mobile */}
+      {/* Globe with responsive positioning - desktop vs mobile - KEEPING ORIGINAL */}
       <motion.div
         className={`absolute inset-0 flex ${isMobile ? 'items-center justify-center' : 'left-[475px] top-[400px] justify-center'}`}
         style={isMobile ? { top: '89%', left: '50%', transform: 'translate(-50%, -50%)' } : {}}
@@ -130,7 +120,7 @@ export default function Hero() {
       {/* Investment deals animation overlay */}
       <div className="absolute inset-0 z-5 pointer-events-none overflow-hidden">
         <motion.div
-          className="absolute top-20 right-20 bg-white/80 backdrop-blur-sm border border-[#4070FF]/15 rounded-md px-5 py-4 shadow-lg"
+          className="absolute top-10 right-20 bg-white/80 backdrop-blur-sm border border-[#4070FF]/15 rounded-md px-5 py-4 shadow-lg"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: contentReady ? 1 : 0, x: contentReady ? 0 : 100 }}
           transition={{ duration: 0.5, delay: 1 }}
@@ -156,6 +146,7 @@ export default function Hero() {
             alt="Pocket Fund"
             layout="fill"
             objectFit="contain"
+            priority
           />
         </motion.div>
 
@@ -184,9 +175,9 @@ export default function Hero() {
           <div className="h-[1px] w-12 bg-[#4070FF]/50"></div>
         </motion.div>
 
-        {/* Main headline with bold text */}
+        {/* Main headline with responsive text sizes */}
         <motion.h1
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#111827] leading-tight tracking-tight mb-8"
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-[#111827] leading-tight tracking-tight mb-8"
           initial={{ opacity: 0, y: 10 }}
           animate={{
             opacity: contentReady ? 1 : 0,
@@ -194,7 +185,7 @@ export default function Hero() {
           }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          We Buy, Scale, and Sell <br />
+          We Buy, Scale, and Sell <br className="hidden sm:block" />
           <span className="text-[#4070FF]">
             Businesses Under $100K
           </span>
@@ -218,7 +209,7 @@ export default function Hero() {
         >
           <Link
             href="https://wa.me/+919820059357?text=Dear%20Dev%20Shah%2C%20I%20hope%20you%20are%20doing%20well.%20I%20am%20interested%20in%20learning%20more%20about%20your%20VC%20firm%20and%20ongoing%20projects.%20Could%20you%20please%20provide%20more%20details%20or%20let%20me%20know%20a%20suitable%20time%20to%20discuss%20further%20on%20my%20company%3F%20Looking%20forward%20to%20your%20response.%20Best%20regards%2C%20Client"
-            className="inline-block bg-[#4070FF] hover:bg-[#3060EB] text-white px-10 py-4 rounded-md text-base font-bold transition-colors shadow-md"
+            className="inline-block bg-[#4070FF] hover:bg-[#3060EB] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-md text-base font-bold transition-colors shadow-md"
           >
             Pitch Your Business
           </Link>
@@ -228,12 +219,28 @@ export default function Hero() {
   );
 }
 
-// Animated Deals Component
+// Animated Deals Component - Mobile responsive
 const AnimatedDeals = ({ fundingRounds, currentStep }: AnimatedDealsProps) => {
   const currentDeal = fundingRounds[currentStep];
+  
+  // Check if mobile
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
-    <div className="flex flex-col w-60">
+    <div className={`flex flex-col ${isMobile ? 'w-48' : 'w-60'}`}>
       <div className="text-xs uppercase tracking-wide text-[#6B7280] font-semibold mb-2">🔥 New Deal Found</div>
 
       <AnimatePresence mode="wait">
@@ -246,15 +253,7 @@ const AnimatedDeals = ({ fundingRounds, currentStep }: AnimatedDealsProps) => {
           className="bg-white rounded-lg border border-[#4070FF]/20 shadow-sm px-4 py-3"
         >
           <div className="text-2xl font-bold text-[#4070FF]">{currentDeal.askingPrice}</div>
-          <div className="mt-1 text-base text-[#111827] font-semibold">{currentDeal.title}</div>
-          <div className="mt-1 text-sm text-[#4B5563]">{currentDeal.summary}</div>
-         
-          <button 
-  onClick={() => window.open("https://www.linkedin.com/company/pocket-fund/posts/?feedView=all", "_blank")}
-  className="text-blue-500 mt-2 text-sm hover:underline cursor-pointer"
->
-  View Deal
-</button>
+          <div className="mt-1 text-base text-[#111827] font-semibold line-clamp-2">{currentDeal.title}</div>
         </motion.div>
       </AnimatePresence>
     </div>

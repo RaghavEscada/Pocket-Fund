@@ -61,18 +61,18 @@ export const MacbookScroll = ({
   return (
     <div
       ref={ref}
-      className="flex min-h-[200vh] shrink-0 scale-[0.35] transform flex-col items-center justify-start py-0 [perspective:800px] sm:scale-50 md:scale-100 md:py-80"
+      className="flex min-h-[160vh] shrink-0 scale-[0.35] transform flex-col items-center justify-start py-0 [perspective:800px] sm:scale-50 md:scale-100 md:py-0"
     >
       <motion.h2
         style={{
           translateY: textTransform,
           opacity: textOpacity,
         }}
-        className="mb-20 text-center text-3xl font-bold text-neutral-800 dark:text-white"
+        className="mb-20 text-center text-3xl font-bold text-black dark:text-black"
       >
         {title || (
           <span>
-            We pocket coolest stuff at <br /> Pocket fund.
+           We curate the finest and most innovative items at <br /> Pocket fund.
           </span>
         )}
       </motion.h2>

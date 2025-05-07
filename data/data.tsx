@@ -563,10 +563,10 @@ export default function MacbookScrollDemo() {
     <div className="overflow-hidden dark:bg-[#0B0B0F] bg-white w-full">
       <MacbookScroll
         title={
-          <span className="font-family: 'Arial', sans-serif; font-size: 2rem; font-weight: bold; color: #333; line-height: 1.5; background: linear-gradient(to right, #00c6ff, #0072ff); padding: 10px 20px; border-radius: 8px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
-          We pocket the coolest stuff at <br />
-          <span className="color: #fff; text-transform: uppercase; font-size: 2.5rem;">Pocket Fund</span>
-      </span>
+          <span>
+           We curate the finest and most innovative items at <br /> Pocket fund.
+          </span>
+
       
         }
         badge={

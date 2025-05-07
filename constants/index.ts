@@ -485,131 +485,115 @@ export const aboutPartberItems = [
 export const FaqItems = [
    {
       id: 1,
-      question: "How do you approach social media marketing?",
-      title: "Description",
-      description: "We create customized social media strategies tailored to your brand’s goals. From content creation to audience engagement and paid advertising, we ensure your brand stands out online and drives real business results.",
+      question: "What is your investment thesis?",
+      title: "Investment Approach",
+      description: "At Pocket Fund, we focus on early-stage startups with innovative solutions in fintech, SaaS, AI, and consumer tech. We look for founding teams with strong domain expertise, clear product-market fit, and scalable business models that can generate significant returns.",
       links: [
          {
             id: 1,
             title: 1,
-            description: "Our team leverages data-driven insights to optimize content and maximize engagement across all platforms."
+            description: "Our investment committee conducts thorough due diligence to identify high-potential ventures with strong growth trajectories."
          },
          {
             id: 2,
             title: 2,
-            description: "We design targeted ad campaigns that enhance brand awareness and generate leads."
-         },
-      ],
-      button: "read"
-   },
-   {
-      id: 6,
-      question: "What is the typical project timeline?",
-      title: "Description",
-      description: "The timeline for completing a project varies depending on its complexity. For social media management, we typically work on a 3-month cycle. For website design, the project duration ranges from 1 to 4 weeks based on the scope and requirements. A detailed timeline will be provided after the initial consultation and project scoping.",
-      links: [
-         {
-            id: 1,
-            title: 1,
-            description: "Reach out with your proposal at partnerships@smmaagency.com with ‘Collaboration Proposal’ in the subject."
-         },
-      ],
-      button: "read"
-   },
-   {
-      id: 6,
-      question: "What is the typical project cost?",
-      title: "Description",
-      description: "The cost of a project depends on its complexity and scope. For social media management services, pricing starts from ₹30,000 and can go up to ₹10,00,000 depending on the scale of the campaign. Website design services typically range from ₹30,000 to ₹1,50,000 based on the features and requirements. Software solutions and development services follow the same price range of ₹30,000 to ₹1,50,000, with more complex projects reaching up to ₹10,00,000. A more accurate estimate will be provided after the initial consultation and project assessment",
-      links: [
-         {
-            id: 1,
-            title: 1,
-            description: "Reach out with your proposal at partnerships@smmaagency.com with ‘Collaboration Proposal’ in the subject."
+            description: "We design founder-friendly term sheets that align incentives and support long-term success."
          },
       ],
       button: "read"
    },
    {
       id: 2,
-      question: "Do you offer website development and revamping?",
-      title: "Description",
-      description: "Yes! We build high-performing, visually stunning websites that are SEO-optimized and designed to convert visitors into customers. Our websites are mobile-friendly, fast, and tailored to your business needs.",
+      question: "What is your typical investment timeline?",
+      title: "Investment Process",
+      description: "Our investment process typically takes 4-8 weeks from initial pitch to funding. This includes preliminary screening (1 week), due diligence (2-4 weeks), term sheet negotiation (1-2 weeks), and closing (1 week). Complex deals may require additional time. We provide a detailed timeline after our first meeting with your founding team.",
       links: [
          {
             id: 1,
             title: 1,
-            description: "We create custom websites, landing pages, and e-commerce platforms that reflect your brand’s identity."
+            description: "Submit your pitch deck to deals@pocketfund.vc with 'Funding Inquiry' in the subject line to begin the process."
          },
       ],
       button: "read"
    },
-   
    {
       id: 3,
-      question: "How do you develop brand identity?",
-      title: "Description",
-      description: "We craft compelling brand identities that resonate with your audience. From logo design to brand messaging, we ensure consistency across all digital and physical touchpoints.",
+      question: "What is your typical check size?",
+      title: "Investment Range",
+      description: "Our check sizes vary based on stage and sector. For pre-seed investments, we typically invest ₹30,00,000 to ₹1,00,00,000. For seed-stage startups, our investments range from ₹1,00,00,000 to ₹5,00,00,000. For Series A participation, we can invest up to ₹10,00,00,000 for the right opportunities. Follow-on funding is available for portfolio companies showing strong performance metrics.",
       links: [
          {
             id: 1,
             title: 1,
-            description: "Our branding process includes logo design, typography, color palettes, and brand voice development."
+            description: "We can lead or participate in funding rounds and often co-invest with other VCs in our network."
          },
       ],
       button: "read"
    },
    {
       id: 4,
-      question: "Do you provide software solutions?",
-      title: "Description",
-      description: "Yes! We develop custom software solutions, including automation tools, CRM systems, and AI-driven applications to streamline your business operations and enhance efficiency.",
+      question: "How do you support portfolio companies?",
+      title: "Value-Add Services",
+      description: "Beyond capital, we provide strategic guidance, operational support, and access to our extensive network. Our portfolio companies benefit from mentorship, recruiting assistance, business development opportunities, and connections to later-stage investors.",
       links: [
          {
             id: 1,
             title: 1,
-            description: "We build scalable and secure software tailored to your business needs."
-         },
-         {
-            id: 2,
-            title: 2,
-            description: "Our team integrates AI and automation to optimize workflows and improve productivity."
+            description: "We organize quarterly founder meetups, industry-specific workshops, and investor demo days exclusively for our portfolio companies."
          },
       ],
       button: "read"
    },
    {
       id: 5,
-      question: "Do you offer social media training or consultations?",
-      title: "Description",
-      description: "Yes, we provide one-on-one and team training sessions to help businesses leverage social media effectively. Our workshops cover content strategy, paid advertising, and growth hacking techniques.",
+      question: "What metrics do you focus on when evaluating startups?",
+      title: "Evaluation Criteria",
+      description: "We evaluate startups based on both quantitative and qualitative factors. Key metrics include revenue growth rate, unit economics, customer acquisition cost (CAC), lifetime value (LTV), monthly/annual recurring revenue (MRR/ARR), market size, and competitive positioning. For pre-revenue startups, we assess product-market fit signals, user engagement, and the founding team's execution capability.",
       links: [
          {
             id: 1,
             title: 1,
-            description: "We teach businesses how to build organic engagement and run high-ROI ad campaigns."
+            description: "Our data-driven approach helps us identify scalable businesses with strong growth potential."
          },
          {
             id: 2,
             title: 2,
-            description: "Our consultations are tailored to your brand’s unique goals and challenges."
+            description: "We look for founders who demonstrate resilience, adaptability, and deep market understanding."
          },
       ],
       button: "read"
    },
    {
       id: 6,
-      question: "Are you open to partnerships and collaborations?",
-      title: "Description",
-      description: "Absolutely! We love collaborating with influencers, brands, and agencies to create impactful marketing campaigns and innovative digital solutions.",
+      question: "Do you provide assistance with follow-on funding?",
+      title: "Future Funding Support",
+      description: "Yes! We actively help our portfolio companies prepare for and secure follow-on funding. This includes introductions to our network of later-stage investors, assistance with pitch deck refinement, financial modeling, and fundraising strategy development.",
       links: [
          {
             id: 1,
             title: 1,
-            description: "Reach out with your proposal at partnerships@smmaagency.com with ‘Collaboration Proposal’ in the subject."
+            description: "Our portfolio companies have collectively raised over ₹500 crore in follow-on funding with our support."
+         },
+         {
+            id: 2,
+            title: 2,
+            description: "We conduct focused fundraising preparation sessions to maximize success in subsequent rounds."
+         },
+      ],
+      button: "read"
+   },
+   {
+      id: 7,
+      question: "Are you open to co-investment opportunities?",
+      title: "Partnerships",
+      description: "Absolutely! We regularly co-invest with other venture capital firms, angel investors, and strategic corporate partners. We believe in collaborative investing to bring diverse perspectives and complementary value-add to our portfolio companies.",
+      links: [
+         {
+            id: 1,
+            title: 1,
+            description: "Reach out with co-investment opportunities at partnerships@pocketfund.vc with 'Co-investment Opportunity' in the subject line."
          },
       ],
       button: "read"
    },
 ];
-
